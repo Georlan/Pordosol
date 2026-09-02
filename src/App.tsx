@@ -17,7 +17,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '26 cm × 32 cm',
-    image: '/images/massa-26x32.jpg',
+    image: '/images/hero-linha.jpg',
     description: 'Versátil para lanches e salgados, com crocância elevada e fácil manuseio.',
     benefits: ['Praticidade no preparo', 'Nível de crocância elevado', 'Fácil manuseio'],
     claims: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
@@ -37,7 +37,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa redonda para pastel',
     format: '15 cm / 500 g • 10 cm / 200 g',
-    image: '/images/massa-redonda.jpg',
+    image: '/images/hero-linha.jpg',
     description: 'Formato redondo para facilitar o preparo de porções e salgados.',
     benefits: ['Praticidade no preparo', 'Nível de crocância elevado', 'Fácil manuseio'],
     claims: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
@@ -47,7 +47,7 @@ const products: Product[] = [
     family: 'Pizzas',
     name: 'Micro pizzas',
     format: '24 unidades por pacote',
-    image: '/images/micro-pizzas.jpg',
+    image: '/images/hero-linha.jpg',
     description: 'Porções pequenas para preparo rápido em diferentes ocasiões.',
     benefits: ['Praticidade', 'Preparo rápido', 'Fácil manuseio'],
     claims: ['Não contém ovos'],
@@ -57,7 +57,7 @@ const products: Product[] = [
     family: 'Pizzas',
     name: 'Mini pizzas',
     format: '5 unidades por pacote',
-    image: '/images/mini-pizzas.jpg',
+    image: '/images/hero-linha.jpg',
     description: 'Uma alternativa prática para lanches, balcões e consumo doméstico.',
     benefits: ['Praticidade', 'Preparo rápido', 'Fácil manuseio'],
     claims: ['Não contém ovos'],
@@ -67,7 +67,7 @@ const products: Product[] = [
     family: 'Pães',
     name: 'Pães árabes',
     format: '5 unidades por pacote',
-    image: '/images/pao-arabe.jpg',
+    image: '/images/hero-linha.jpg',
     description: 'Pães versáteis para recheios, sanduíches e preparações rápidas.',
     benefits: ['Praticidade', 'Preparo rápido', 'Fácil manuseio'],
     claims: ['Não contém proteína animal'],
@@ -104,7 +104,8 @@ function App() {
     <>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Pôr do Sol Alimentos — início">
-          <img src="/images/logo-pordosol.png" alt="Pôr do Sol Alimentos" />
+          <span className="brand-main">PÔR DO SOL</span>
+          <span className="brand-sub">ALIMENTOS</span>
         </a>
         <nav className="desktop-nav" aria-label="Navegação principal">
           <a href="#produtos">Produtos</a>
@@ -186,7 +187,7 @@ function App() {
 
         <section id="sobre" className="about-section">
           <div className="about-visual">
-            <img src="/images/massa-26x32.jpg" alt="Massa para pastel Pôr do Sol" />
+            <img src="/images/hero-linha.jpg" alt="Linha de produtos Pôr do Sol" />
             <div className="about-number"><strong>30+</strong><span>anos de história</span></div>
           </div>
           <div className="about-copy">
@@ -238,7 +239,7 @@ function App() {
       </main>
 
       <footer>
-        <img src="/images/logo-pordosol.png" alt="Pôr do Sol Alimentos" />
+        <div className="footer-brand"><strong>PÔR DO SOL</strong><span>ALIMENTOS</span></div>
         <p>Pôr do Sol Alimentos • Limoeiro do Norte - CE</p>
       </footer>
 
