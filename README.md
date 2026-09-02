@@ -2,6 +2,8 @@
 
 Landing page institucional da **Pôr do Sol Alimentos**, fabricante de massas sediada em Limoeiro do Norte, Ceará.
 
+O projeto agora é mantido diretamente neste repositório. A direção visual segue uma linguagem editorial/industrial de alimentos, com menos componentes genéricos e maior foco nos produtos e na história regional da marca.
+
 ## Desenvolvimento
 
 ```bash
@@ -17,9 +19,9 @@ npm run build
 
 ## Estrutura
 
-- `src/App.tsx`: conteúdo e estrutura principal da página.
+- `src/App.tsx`: estrutura, conteúdo e dados de produtos.
 - `src/styles.css`: direção visual e responsividade.
-- `public/images/`: imagens oficiais derivadas do catálogo fornecido pela empresa.
+- `public/images/`: imagens do material de catálogo utilizadas na primeira migração.
 
 ## Conteúdo
 
