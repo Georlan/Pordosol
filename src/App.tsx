@@ -159,7 +159,7 @@ function App() {
             </div>
           </div>
           <figure className="hero-media">
-            <img src="/images/massa-15x30.svg" alt="Massa para pastel Pôr do Sol com sugestão de preparo" />
+            <img src="/images/hero-linha.jpg" alt="Linha de produtos Pôr do Sol Alimentos apresentada no catálogo" />
             <figcaption className="hero-caption">Massas • pizzas • pães • canudinhos</figcaption>
           </figure>
         </section>
