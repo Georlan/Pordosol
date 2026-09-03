@@ -21,7 +21,7 @@ const products: Product[] = [
     id: 'massa-26x32',
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
-    format: '26 cm × 32 cm',
+    format: '26 cm × 32 cm • 2 kg',
     image: '/images/massa-26x32-catalogo-v2.svg',
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
@@ -43,44 +43,44 @@ const products: Product[] = [
     id: 'massa-redonda',
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
-    format: '15 cm de diâmetro / 500 g • 10 cm de diâmetro / 200 g',
+    format: 'Linha Preciosa • congelado • 15 cm / 500 g • 10 cm / 200 g',
     image: embeddedAssets.massaRedonda,
     imageReady: true,
-    description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
-    benefits: ['Praticidade para lanches e salgados', 'Nível de crocância elevado', 'Fácil manuseio'],
+    description: 'Apresentada no catálogo oficial na linha Preciosa, com indicação de produto congelado. Ideal para quem busca praticidade na hora de fazer lanches e salgados.',
+    benefits: ['Nível de crocância elevado', 'Fácil manuseio', 'Produto congelado'],
     claims: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
   },
   {
     id: 'micro-pizzas',
     family: 'Pizzas',
     name: 'Micro pizzas',
-    format: '24 unidades por pacote',
+    format: '24 unidades por pacote • porção 50 g (1 unidade)',
     image: '/images/micro-pizzas-catalogo.svg',
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
-    benefits: ['Praticidade para lanches e salgados', 'Preparo rápido', 'Fácil manuseio'],
+    benefits: ['24 unidades por pacote', 'Preparo rápido', 'Fácil manuseio'],
     claims: ['Não contém ovos'],
   },
   {
     id: 'mini-pizzas',
     family: 'Pizzas',
     name: 'Mini pizzas',
-    format: '5 unidades por pacote',
+    format: '5 unidades por pacote • porção 50 g (1 unidade)',
     image: embeddedAssets.miniPizzas,
     imageReady: true,
-    description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
-    benefits: ['Praticidade para lanches e salgados', 'Preparo rápido', 'Fácil manuseio'],
+    description: 'O catálogo oficial apresenta os sabores Mista, Calabresa, Carne de Sol, Frango e Mussarela. Produto de preparo rápido e fácil manuseio.',
+    benefits: ['5 unidades por pacote', 'Preparo rápido', 'Fácil manuseio'],
     claims: ['Não contém ovos'],
   },
   {
     id: 'pao-arabe',
     family: 'Pães',
     name: 'Pães árabes',
-    format: '5 unidades por pacote',
+    format: '5 unidades por pacote • porção 50 g (1 unidade)',
     image: '/images/paes-arabes-catalogo.svg',
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
-    benefits: ['Praticidade para lanches e salgados', 'Preparo rápido', 'Fácil manuseio'],
+    benefits: ['5 unidades por pacote', 'Preparo rápido', 'Fácil manuseio'],
     claims: ['Não contém proteína animal'],
   },
   {
@@ -91,13 +91,12 @@ const products: Product[] = [
     image: embeddedAssets.canudinhos,
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
-    benefits: ['Praticidade para lanches e salgados', 'Preparo rápido', 'Fácil manuseio'],
+    benefits: ['50 unidades por pacote', 'Preparo rápido', 'Fácil manuseio'],
     claims: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
   },
 ]
 
 const families: Family[] = ['Massas para pastel', 'Pizzas', 'Pães', 'Canudinhos']
-const heroWords = ['produz', 'vende', 'serve']
 const fallbackImage = '/images/imagem-em-preparacao.svg'
 
 const familyId = (family: Family) =>
@@ -107,20 +106,11 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeProduct, setActiveProduct] = useState<Product | null>(null)
   const [activeFamily, setActiveFamily] = useState<Family>('Massas para pastel')
-  const [heroWordIndex, setHeroWordIndex] = useState(0)
 
   useEffect(() => {
     document.body.style.overflow = activeProduct ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [activeProduct])
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    const timer = window.setInterval(() => {
-      setHeroWordIndex((index) => (index + 1) % heroWords.length)
-    }, 2200)
-    return () => window.clearInterval(timer)
-  }, [])
 
   useEffect(() => {
     const handleKeyDown = (event: globalThis.KeyboardEvent) => {
@@ -192,7 +182,7 @@ function App() {
         <section id="inicio" className="hero">
           <div className="hero-copy">
             <p className="eyebrow">Pôr do Sol Alimentos • Vale do Jaguaribe</p>
-            <h1>Feita para quem<br /><span className="hero-rotator">{heroWords[heroWordIndex]}.</span></h1>
+            <h1>Feita para quem<br /><span className="hero-rotator">produz e vende.</span></h1>
             <p className="hero-text">Há mais de 30 anos produzindo massas e alimentos com praticidade, qualidade e presença regional em Limoeiro do Norte, Ceará.</p>
             <div className="hero-actions">
               <a className="primary-action" href="#produtos">Conheça a linha</a>
@@ -274,7 +264,7 @@ function App() {
           <div className="about-copy">
             <p className="eyebrow">Sobre nós</p><h2>Uma história feita no Vale do Jaguaribe.</h2>
             <p>A Pôr do Sol Alimentos está sediada em Limoeiro do Norte, Ceará, e atua na produção de massas para pastéis, mini pizzas, pães árabes e outros produtos relacionados, destinados a pequenos empreendedores, supermercados e mercearias.</p>
-            <p>Com mais de 30 anos no mercado, a empresa mantém atuação regional e presença em alguns distribuidores regionais e redes de supermercado.</p>
+            <p>Com mais de 30 anos no mercado e campo fabril de 250 m² informado no catálogo institucional, a empresa mantém atuação regional e presença em alguns distribuidores regionais e redes de supermercado.</p>
           </div>
         </section>
 
@@ -287,7 +277,7 @@ function App() {
           <div><p className="eyebrow light">Contato</p><h2>Vamos conversar?</h2><p>Para informações sobre produtos e atendimento comercial, fale diretamente com a equipe da Pôr do Sol.</p></div>
           <div className="contact-grid">
             <div><h3>Endereço</h3><address>Rua Augusto Fidélis, 2443<br />CEP 62.930-000<br />Limoeiro do Norte - CE</address></div>
-            <div><h3>Telefones</h3><a href="tel:+5588999005560">(88) 9 9900-5560</a><a href="tel:+558834234432">(88) 3423-4432</a></div>
+            <div><h3>Telefones</h3><a href="tel:+5588999005560">(88) 9 9900-5560</a><a href="tel:+5588992712966">(88) 9 9271-2966</a><a href="tel:+558834234432">(88) 3423-4432</a></div>
             <div className="contact-email"><h3>E-mail</h3><a href="mailto:pordosolalimentos@hotmail.com">pordosolalimentos@hotmail.com</a></div>
             <div className="contact-legal"><h3>Identificação</h3><p>Fabricado por: Milena Mara Costa da Silva - ME<br />CNPJ 07.677.559/0001-08<br />CGF 06.540.577-3<br />Indústria Brasileira</p></div>
           </div>
