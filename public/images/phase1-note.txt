@@ -1,0 +1,1 @@
+Phase 1 image migration is being rebuilt from the official catalog. Broken binary placeholders are intentionally being replaced product by product.
