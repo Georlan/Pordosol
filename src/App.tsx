@@ -170,8 +170,8 @@ function App() {
             </div>
           </div>
           <figure className="hero-media">
-            <img src="/images/imagem-em-preparacao.svg" alt="Material visual Pôr do Sol em atualização" onError={useFallback} />
-            <figcaption className="hero-caption">Massas • pizzas • pães • canudinhos</figcaption>
+            <img src="/images/hero-oficial.jpg" alt="Linha de produtos Pôr do Sol apresentada no catálogo oficial" onError={useFallback} />
+            <figcaption className="hero-caption">Linha de produtos Pôr do Sol</figcaption>
           </figure>
         </section>
 
