@@ -1,0 +1,1 @@
+Assets da landing page Pôr do Sol. Imagens derivadas do catálogo são adicionadas gradualmente, uma por uma, para evitar links quebrados durante a migração.
