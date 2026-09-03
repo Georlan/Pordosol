@@ -42,7 +42,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa redonda para pastel',
     format: '15 cm / 500 g • 10 cm / 200 g',
-    image: '/images/massa-redonda.svg',
+    image: '/images/massa-redonda-catalogo.webp',
     imageReady: true,
     description: 'Formato redondo para facilitar o preparo de porções e salgados.',
     benefits: ['Praticidade no preparo', 'Nível de crocância elevado', 'Fácil manuseio'],
