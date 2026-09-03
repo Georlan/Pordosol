@@ -31,7 +31,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '15 cm × 30 cm',
-    image: '/images/massa-15x30.svg',
+    image: '/images/massa-15x30.jpg',
     imageReady: true,
     description: 'Uma opção prática para produzir lanches e salgados com agilidade.',
     benefits: ['Praticidade no preparo', 'Nível de crocância elevado', 'Fácil manuseio'],
