@@ -1,0 +1,1 @@
+Fase 1: imagem visual de referência derivada da página do catálogo da Massa para pastel, canudinho e lasanha 26 cm x 32 cm. O arquivo binário correspondente será usado no deploy do site.
