@@ -12,9 +12,25 @@
   line-height: 1.6;
 }
 
-/* Desktop editorial refinement: rebalance the hero, tighten the manifesto,
-   avoid empty-looking single-product families and break the solid green wall. */
+/* Keep the current React rotator implementation invisible on desktop while the
+   headline presents one stable institutional message. This avoids layout reflow
+   without touching product or company facts. */
 @media (min-width: 981px) {
+  .hero-rotator {
+    min-width: 8.8ch;
+    color: transparent;
+    animation: none !important;
+  }
+
+  .hero-rotator::before {
+    content: 'produz e vende.';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--red);
+    white-space: nowrap;
+  }
+
   .hero {
     grid-template-columns: 1.08fr .92fr;
     gap: clamp(28px, 3vw, 52px);
@@ -53,6 +69,41 @@
     margin-left: clamp(48px, 6vw, 110px);
   }
 
+  .family-tabs button {
+    padding-right: 52px;
+  }
+
+  .family-tabs button::before {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    min-width: 26px;
+    padding: 3px 7px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    background: var(--paper);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: .66rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .family-tabs button:nth-child(1)::before { content: '(3)'; }
+  .family-tabs button:nth-child(2)::before { content: '(2)'; }
+  .family-tabs button:nth-child(3)::before { content: '(1)'; }
+  .family-tabs button:nth-child(4)::before { content: '(1)'; }
+
+  .family-tabs button.active::before {
+    border-color: rgba(15, 84, 45, .34);
+    color: var(--green);
+    background: var(--paper-2);
+  }
+
+  .featured-family {
+    animation: family-fade .18s cubic-bezier(.2, 0, 0, 1) both !important;
+  }
+
   .featured-family:has(.product-grid > .product:only-child) {
     grid-template-columns: minmax(220px, .34fr) minmax(0, 1fr);
   }
@@ -60,6 +111,30 @@
   .product-grid:has(> .product:only-child) {
     grid-template-columns: minmax(0, 760px);
     justify-content: start;
+  }
+
+  .product-format {
+    display: inline-flex;
+    width: fit-content;
+    margin-top: 18px;
+    padding: 5px 8px 4px;
+    border: 1px solid rgba(182, 31, 36, .28);
+    background: rgba(182, 31, 36, .035);
+  }
+
+  .claims {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .claims span {
+    border: 1px solid rgba(15, 84, 45, .2);
+    border-left: 1px solid rgba(15, 84, 45, .2);
+    padding: 6px 9px 5px;
+    background: rgba(15, 84, 45, .045);
+    color: var(--green);
+    font-size: .64rem;
+    letter-spacing: .025em;
   }
 
   .business-section {
@@ -94,6 +169,11 @@
   .business-list span {
     color: var(--red);
   }
+}
+
+@keyframes family-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media (max-width: 640px) {
