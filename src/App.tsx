@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import type { SyntheticEvent } from 'react'
+import type { KeyboardEvent, SyntheticEvent } from 'react'
 
 type Family = 'Massas para pastel' | 'Pizzas' | 'Pães' | 'Canudinhos'
 
@@ -21,7 +21,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '26 cm × 32 cm',
-    image: '/images/massa-26x32-oficial.svg',
+    image: '/images/massa-26x32-catalogo-v2.svg',
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Nível de crocância elevado', 'Fácil manuseio'],
@@ -32,7 +32,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '15 cm × 30 cm',
-    image: '/images/massa-15x30-oficial.svg',
+    image: '/images/massa-15x30-catalogo-v2.svg',
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Nível de crocância elevado', 'Fácil manuseio'],
@@ -43,7 +43,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '15 cm de diâmetro / 500 g • 10 cm de diâmetro / 200 g',
-    image: '/images/massa-redonda-oficial.svg',
+    image: '/images/massa-redonda-catalogo-v2.svg',
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Nível de crocância elevado', 'Fácil manuseio'],
@@ -54,9 +54,9 @@ const products: Product[] = [
     family: 'Pizzas',
     name: 'Micro pizzas',
     format: '24 unidades por pacote',
-    image: '/images/imagem-em-preparacao.svg',
-    imageReady: false,
-    description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com preparo rápido e fácil manuseio.',
+    image: '/images/micro-pizzas-catalogo.svg',
+    imageReady: true,
+    description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Preparo rápido', 'Fácil manuseio'],
     claims: ['Não contém ovos'],
   },
@@ -65,9 +65,9 @@ const products: Product[] = [
     family: 'Pizzas',
     name: 'Mini pizzas',
     format: '5 unidades por pacote',
-    image: '/images/imagem-em-preparacao.svg',
-    imageReady: false,
-    description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com preparo rápido e fácil manuseio.',
+    image: '/images/mini-pizzas-catalogo.svg',
+    imageReady: true,
+    description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Preparo rápido', 'Fácil manuseio'],
     claims: ['Não contém ovos'],
   },
@@ -76,9 +76,9 @@ const products: Product[] = [
     family: 'Pães',
     name: 'Pães árabes',
     format: '5 unidades por pacote',
-    image: '/images/imagem-em-preparacao.svg',
-    imageReady: false,
-    description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com preparo rápido e fácil manuseio.',
+    image: '/images/paes-arabes-catalogo.svg',
+    imageReady: true,
+    description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Preparo rápido', 'Fácil manuseio'],
     claims: ['Não contém proteína animal'],
   },
@@ -87,9 +87,9 @@ const products: Product[] = [
     family: 'Canudinhos',
     name: 'Canudinhos para rechear',
     format: '50 unidades por pacote',
-    image: '/images/imagem-em-preparacao.svg',
-    imageReady: false,
-    description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com preparo rápido e fácil manuseio.',
+    image: '/images/canudinhos-catalogo.svg',
+    imageReady: true,
+    description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Preparo rápido', 'Fácil manuseio'],
     claims: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
   },
@@ -99,7 +99,8 @@ const families: Family[] = ['Massas para pastel', 'Pizzas', 'Pães', 'Canudinhos
 const heroWords = ['produz', 'vende', 'serve']
 const fallbackImage = '/images/imagem-em-preparacao.svg'
 
-const familyId = (family: Family) => family.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-')
+const familyId = (family: Family) =>
+  family.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-')
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -120,6 +121,16 @@ function App() {
     return () => window.clearInterval(timer)
   }, [])
 
+  useEffect(() => {
+    const handleKeyDown = (event: globalThis.KeyboardEvent) => {
+      if (event.key !== 'Escape') return
+      setActiveProduct(null)
+      setMenuOpen(false)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
   const activeProducts = useMemo(
     () => products.filter((product) => product.family === activeFamily),
     [activeFamily],
@@ -129,6 +140,24 @@ function App() {
     if (!event.currentTarget.src.endsWith(fallbackImage)) {
       event.currentTarget.src = fallbackImage
     }
+  }
+
+  const selectFamily = (family: Family) => {
+    setActiveFamily(family)
+  }
+
+  const handleTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    let targetIndex = index
+    if (event.key === 'ArrowRight') targetIndex = (index + 1) % families.length
+    else if (event.key === 'ArrowLeft') targetIndex = (index - 1 + families.length) % families.length
+    else if (event.key === 'Home') targetIndex = 0
+    else if (event.key === 'End') targetIndex = families.length - 1
+    else return
+
+    event.preventDefault()
+    const targetFamily = families[targetIndex]
+    selectFamily(targetFamily)
+    requestAnimationFrame(() => document.getElementById(`tab-${familyId(targetFamily)}`)?.focus())
   }
 
   return (
@@ -170,7 +199,7 @@ function App() {
             </div>
           </div>
           <figure className="hero-media">
-            <img src="/images/hero-oficial.jpg" alt="Linha de produtos Pôr do Sol apresentada no catálogo oficial" onError={useFallback} />
+            <img src="/images/hero-oficial.jpg" alt="Linha de produtos Pôr do Sol apresentada no catálogo oficial" onError={useFallback} fetchPriority="high" />
             <figcaption className="hero-caption">Linha de produtos Pôr do Sol</figcaption>
           </figure>
         </section>
@@ -195,14 +224,25 @@ function App() {
             {families.map((family, index) => {
               const id = familyId(family)
               return (
-                <button key={family} id={`tab-${id}`} type="button" role="tab" aria-selected={activeFamily === family} aria-controls={`panel-${id}`} className={activeFamily === family ? 'active' : ''} onClick={() => setActiveFamily(family)}>
+                <button
+                  key={family}
+                  id={`tab-${id}`}
+                  type="button"
+                  role="tab"
+                  aria-selected={activeFamily === family}
+                  aria-controls={`panel-${id}`}
+                  tabIndex={activeFamily === family ? 0 : -1}
+                  className={activeFamily === family ? 'active' : ''}
+                  onClick={() => selectFamily(family)}
+                  onKeyDown={(event) => handleTabKeyDown(event, index)}
+                >
                   <span>0{index + 1}</span>{family}
                 </button>
               )
             })}
           </div>
 
-          <div id={`panel-${familyId(activeFamily)}`} className="featured-family" role="tabpanel" aria-labelledby={`tab-${familyId(activeFamily)}`}>
+          <div key={activeFamily} id={`panel-${familyId(activeFamily)}`} className="featured-family" role="tabpanel" aria-labelledby={`tab-${familyId(activeFamily)}`}>
             <div className="family-title">
               <p className="eyebrow">Família selecionada</p>
               <h3>{activeFamily}</h3>
@@ -212,7 +252,7 @@ function App() {
               {activeProducts.map((product) => (
                 <article className="product" key={product.id}>
                   <button className={`product-image ${product.imageReady ? '' : 'pending'}`} onClick={() => setActiveProduct(product)} aria-label={`Ver detalhes de ${product.name}`}>
-                    <img src={product.image} alt={product.name} onError={useFallback} />
+                    <img src={product.image} alt={product.name} onError={useFallback} loading="lazy" />
                     <span className="product-open">Ver produto ↗</span>
                   </button>
                   <p className="product-format">{product.format}</p>
@@ -227,7 +267,7 @@ function App() {
 
         <section id="sobre" className="about-section">
           <div className="about-visual">
-            <img src="/images/sobre-fabrica-oficial.svg" alt="Imagem institucional apresentada no catálogo da Pôr do Sol Alimentos" onError={useFallback} />
+            <img src="/images/sobre-fabrica-catalogo-v2.svg" alt="Imagem institucional apresentada no catálogo da Pôr do Sol Alimentos" onError={useFallback} loading="lazy" />
             <div className="about-number"><strong>30+</strong><span>anos de história</span></div>
           </div>
           <div className="about-copy">
@@ -260,7 +300,13 @@ function App() {
           <section className="modal" role="dialog" aria-modal="true" aria-labelledby="product-modal-title" onMouseDown={(event) => event.stopPropagation()}>
             <button className="modal-close" onClick={() => setActiveProduct(null)} aria-label="Fechar">×</button>
             <img src={activeProduct.image} alt={activeProduct.name} onError={useFallback} />
-            <div className="modal-content"><p className="product-format">{activeProduct.format}</p><h2 id="product-modal-title">{activeProduct.name}</h2><p>{activeProduct.description}</p><ul>{activeProduct.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul><div className="claims">{activeProduct.claims.map((claim) => <span key={claim}>{claim}</span>)}</div></div>
+            <div className="modal-content">
+              <p className="product-format">{activeProduct.format}</p>
+              <h2 id="product-modal-title">{activeProduct.name}</h2>
+              <p>{activeProduct.description}</p>
+              <ul>{activeProduct.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul>
+              <div className="claims">{activeProduct.claims.map((claim) => <span key={claim}>{claim}</span>)}</div>
+            </div>
           </section>
         </div>
       )}
