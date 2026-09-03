@@ -212,7 +212,7 @@ function App() {
         </section>
 
         <section id="sobre" className="about-section">
-          <div className="about-visual"><img src="/images/massa-26x32.svg" alt="Massa para pastel Pôr do Sol" /><div className="about-number"><strong>30+</strong><span>anos de história</span></div></div>
+          <div className="about-visual"><img src="/images/sobre-fabrica-catalogo.webp" alt="Ambiente de produção da Pôr do Sol Alimentos apresentado no catálogo" /><div className="about-number"><strong>30+</strong><span>anos de história</span></div></div>
           <div className="about-copy">
             <p className="eyebrow">Sobre nós</p><h2>Uma história feita no Vale do Jaguaribe.</h2>
             <p>A Pôr do Sol Alimentos está sediada em Limoeiro do Norte, Ceará, e atua na produção de massas para pastéis, mini pizzas, pães árabes e outros produtos relacionados.</p>
