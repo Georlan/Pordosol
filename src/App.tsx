@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { KeyboardEvent, SyntheticEvent } from 'react'
+import { embeddedAssets } from './embeddedAssets'
 
 type Family = 'Massas para pastel' | 'Pizzas' | 'Pães' | 'Canudinhos'
 
@@ -32,7 +33,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '15 cm × 30 cm',
-    image: '/images/massa-15x30-catalogo-v2.svg',
+    image: embeddedAssets.massa15x30,
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Nível de crocância elevado', 'Fácil manuseio'],
@@ -43,7 +44,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '15 cm de diâmetro / 500 g • 10 cm de diâmetro / 200 g',
-    image: '/images/massa-redonda-catalogo-v2.svg',
+    image: embeddedAssets.massaRedonda,
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Nível de crocância elevado', 'Fácil manuseio'],
@@ -65,7 +66,7 @@ const products: Product[] = [
     family: 'Pizzas',
     name: 'Mini pizzas',
     format: '5 unidades por pacote',
-    image: '/images/mini-pizzas-catalogo.svg',
+    image: embeddedAssets.miniPizzas,
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Preparo rápido', 'Fácil manuseio'],
@@ -87,7 +88,7 @@ const products: Product[] = [
     family: 'Canudinhos',
     name: 'Canudinhos para rechear',
     format: '50 unidades por pacote',
-    image: '/images/canudinhos-catalogo.svg',
+    image: embeddedAssets.canudinhos,
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Preparo rápido', 'Fácil manuseio'],
@@ -267,7 +268,7 @@ function App() {
 
         <section id="sobre" className="about-section">
           <div className="about-visual">
-            <img src="/images/sobre-fabrica-catalogo-v2.svg" alt="Imagem institucional apresentada no catálogo da Pôr do Sol Alimentos" onError={useFallback} loading="lazy" />
+            <img src={embeddedAssets.sobre} alt="Imagem institucional apresentada no catálogo da Pôr do Sol Alimentos" onError={useFallback} loading="lazy" />
             <div className="about-number"><strong>30+</strong><span>anos de história</span></div>
           </div>
           <div className="about-copy">
