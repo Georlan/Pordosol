@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 
+type Family = 'Massas para pastel' | 'Pizzas' | 'Pães' | 'Canudinhos'
+
 type Product = {
   id: string
-  family: 'Massas para pastel' | 'Pizzas' | 'Pães' | 'Canudinhos'
+  family: Family
   name: string
   format: string
   image: string
@@ -84,21 +86,31 @@ const products: Product[] = [
   },
 ]
 
-const families = ['Massas para pastel', 'Pizzas', 'Pães', 'Canudinhos'] as const
+const families: Family[] = ['Massas para pastel', 'Pizzas', 'Pães', 'Canudinhos']
+const heroWords = ['produz', 'vende', 'serve']
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeProduct, setActiveProduct] = useState<Product | null>(null)
+  const [activeFamily, setActiveFamily] = useState<Family>('Massas para pastel')
+  const [heroWordIndex, setHeroWordIndex] = useState(0)
 
   useEffect(() => {
     document.body.style.overflow = activeProduct ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [activeProduct])
 
-  const grouped = useMemo(() => families.map((family) => ({
-    family,
-    items: products.filter((product) => product.family === family),
-  })), [])
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setHeroWordIndex((index) => (index + 1) % heroWords.length)
+    }, 2200)
+    return () => window.clearInterval(timer)
+  }, [])
+
+  const activeProducts = useMemo(
+    () => products.filter((product) => product.family === activeFamily),
+    [activeFamily],
+  )
 
   return (
     <>
@@ -130,18 +142,21 @@ function App() {
       <main>
         <section id="inicio" className="hero">
           <div className="hero-copy">
-            <p className="eyebrow">Pôr do Sol Alimentos • Limoeiro do Norte, CE</p>
-            <h1>Massas que fazem parte de quem produz, vende e serve.</h1>
-            <p className="hero-text">Há mais de 30 anos produzindo alimentos com foco em praticidade, qualidade e confiança no coração do Vale do Jaguaribe.</p>
+            <p className="eyebrow">Pôr do Sol Alimentos • Vale do Jaguaribe</p>
+            <h1>
+              Feita para quem<br />
+              <span className="hero-rotator" aria-label="produz, vende e serve">{heroWords[heroWordIndex]}.</span>
+            </h1>
+            <p className="hero-text">Há mais de 30 anos produzindo massas e alimentos com praticidade, qualidade e presença regional em Limoeiro do Norte, Ceará.</p>
             <div className="hero-actions">
-              <a className="primary-action" href="#produtos">Conheça nossos produtos</a>
-              <a className="text-link" href="#contato">Fale com o comercial →</a>
+              <a className="primary-action" href="#produtos">Conheça a linha</a>
+              <a className="text-link" href="#negocio">Para o seu negócio →</a>
             </div>
           </div>
-          <div className="hero-media">
+          <figure className="hero-media">
             <img src="/images/hero-linha.jpg" alt="Linha de produtos Pôr do Sol Alimentos" />
-            <div className="hero-caption">Tradição regional • produtos para diferentes rotinas</div>
-          </div>
+            <figcaption className="hero-caption">Massas • pizzas • pães • canudinhos</figcaption>
+          </figure>
         </section>
 
         <section className="institution-strip" aria-label="Informações institucionais">
@@ -150,38 +165,58 @@ function App() {
           <span>Atuação regional</span>
         </section>
 
-        <section id="produtos" className="section products-section">
-          <div className="section-heading">
-            <p className="eyebrow">Linha completa</p>
-            <h2>Nossos produtos</h2>
-            <p>Massas e alimentos organizados por aplicação, com informações diretas para facilitar sua escolha.</p>
+        <section className="brand-statement" aria-label="Posicionamento da marca">
+          <p className="eyebrow">Tradição que acompanha a rotina</p>
+          <p className="statement-line">Da massa do pastel ao pão árabe,</p>
+          <p className="statement-line accent">praticidade para preparar, vender e servir.</p>
+        </section>
+
+        <section id="produtos" className="products-section">
+          <div className="products-intro">
+            <div>
+              <p className="eyebrow">Nossos produtos</p>
+              <h2>Uma linha para diferentes preparos.</h2>
+            </div>
+            <p>Escolha uma família para explorar os produtos. Informações objetivas, sem excesso de elementos visuais.</p>
           </div>
 
-          <div className="families">
-            {grouped.map(({ family, items }, groupIndex) => (
-              <div className="family" key={family}>
-                <aside className="family-heading">
-                  <span>0{groupIndex + 1}</span>
-                  <h3>{family}</h3>
-                </aside>
-                <div className="product-grid">
-                  {items.map((product) => (
-                    <article className="product" key={product.id}>
-                      <button className="product-image" onClick={() => setActiveProduct(product)} aria-label={`Ver detalhes de ${product.name}`}>
-                        <img src={product.image} alt={product.name} />
-                      </button>
-                      <p className="product-format">{product.format}</p>
-                      <h4>{product.name}</h4>
-                      <p className="product-description">{product.description}</p>
-                      <div className="claims">
-                        {product.claims.map((claim) => <span key={claim}>{claim}</span>)}
-                      </div>
-                      <button className="product-link" onClick={() => setActiveProduct(product)}>Ver produto →</button>
-                    </article>
-                  ))}
-                </div>
-              </div>
+          <div className="family-tabs" role="tablist" aria-label="Famílias de produtos">
+            {families.map((family, index) => (
+              <button
+                key={family}
+                type="button"
+                role="tab"
+                aria-selected={activeFamily === family}
+                className={activeFamily === family ? 'active' : ''}
+                onClick={() => setActiveFamily(family)}
+              >
+                <span>0{index + 1}</span>{family}
+              </button>
             ))}
+          </div>
+
+          <div className="featured-family" role="tabpanel">
+            <div className="family-title">
+              <p className="eyebrow">Família selecionada</p>
+              <h3>{activeFamily}</h3>
+              <p>{activeProducts.length} {activeProducts.length === 1 ? 'produto' : 'produtos'} nesta categoria.</p>
+            </div>
+            <div className="product-grid">
+              {activeProducts.map((product) => (
+                <article className="product" key={product.id}>
+                  <button className="product-image" onClick={() => setActiveProduct(product)} aria-label={`Ver detalhes de ${product.name}`}>
+                    <img src={product.image} alt={product.name} />
+                    <span className="product-open">Ver produto ↗</span>
+                  </button>
+                  <p className="product-format">{product.format}</p>
+                  <h4>{product.name}</h4>
+                  <p className="product-description">{product.description}</p>
+                  <div className="claims">
+                    {product.claims.map((claim) => <span key={claim}>{claim}</span>)}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -201,8 +236,8 @@ function App() {
         <section id="negocio" className="business-section">
           <div>
             <p className="eyebrow light">Para o seu negócio</p>
-            <h2>Para quem vende, produz e serve todos os dias.</h2>
-            <p>Produtos pensados para pequenos empreendedores, supermercados, mercearias e distribuidores regionais.</p>
+            <h2>Produtos para quem trabalha com alimento todos os dias.</h2>
+            <p>Uma linha voltada a pequenos empreendedores, supermercados, mercearias e distribuidores regionais.</p>
             <a className="primary-action inverted" href="#contato">Falar com o comercial</a>
           </div>
           <ol className="business-list">
