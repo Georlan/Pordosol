@@ -12,169 +12,84 @@
   line-height: 1.6;
 }
 
-/* Keep the current React rotator implementation invisible on desktop while the
-   headline presents one stable institutional message. This avoids layout reflow
-   without touching product or company facts. */
 @media (min-width: 981px) {
-  .hero-rotator {
-    min-width: 8.8ch;
-    color: transparent;
-    animation: none !important;
+  #inicio.hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: min(860px, calc(100vh - var(--header-h)));
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+    background-color: var(--green-dark);
+    background-image: url('/images/hero-produtos-madeira.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 52%;
   }
 
-  .hero-rotator::before {
-    content: 'produz e vende.';
+  #inicio.hero::before {
+    content: '';
     position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--red);
-    white-space: nowrap;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(5, 35, 17, .74) 0%, rgba(5, 35, 17, .54) 31%, rgba(5, 35, 17, .24) 51%, rgba(5, 35, 17, .06) 67%, rgba(5, 35, 17, 0) 78%);
   }
 
-  .hero {
-    grid-template-columns: 1.08fr .92fr;
-    gap: clamp(28px, 3vw, 52px);
-    padding-right: clamp(28px, 4vw, 68px);
+  #inicio.hero .hero-copy {
+    position: relative;
+    z-index: 1;
+    width: min(46vw, 620px);
+    max-width: 620px;
+    padding: clamp(72px, 7vw, 118px) 0 clamp(72px, 7vw, 118px) clamp(44px, 5.5vw, 92px);
   }
 
-  .hero-copy {
-    padding-right: clamp(34px, 4vw, 72px);
-  }
+  #inicio.hero .eyebrow { color: var(--yellow); text-shadow: 0 1px 12px rgba(0,0,0,.18); }
+  #inicio.hero h1 { color: #fff; font-size: clamp(4.4rem, 6.4vw, 7.7rem); text-shadow: 0 2px 24px rgba(0,0,0,.18); }
+  #inicio.hero .hero-rotator { min-width: 0; color: var(--yellow); animation: none !important; }
+  #inicio.hero .hero-rotator::before,
+  #inicio.hero .hero-rotator::after { content: none; display: none; }
+  #inicio.hero .hero-text { max-width: 520px; color: rgba(255,255,255,.9); text-shadow: 0 1px 14px rgba(0,0,0,.2); }
+  #inicio.hero .text-link { color: #fff; border-bottom-color: rgba(255,255,255,.72); }
+  #inicio.hero .text-link:hover { border-bottom-color: var(--yellow); color: var(--yellow); }
+  #inicio.hero .hero-media { display: none; }
 
-  .hero-media {
-    align-self: center;
-    min-height: 0;
-    height: min(76vh, 720px);
-    margin: clamp(28px, 4vh, 52px) 0;
-    border: 1px solid var(--line);
-    background: var(--green-dark);
-  }
+  .brand-statement { padding-top: clamp(70px, 6vw, 94px); padding-bottom: clamp(76px, 6.5vw, 104px); }
+  .statement-line { font-size: clamp(3.6rem, 5.9vw, 7rem); line-height: .92; }
+  .statement-line.accent { margin-left: clamp(48px, 6vw, 110px); }
 
-  .hero-media img {
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .brand-statement {
-    padding-top: clamp(70px, 6vw, 94px);
-    padding-bottom: clamp(76px, 6.5vw, 104px);
-  }
-
-  .statement-line {
-    font-size: clamp(3.6rem, 5.9vw, 7rem);
-    line-height: .92;
-  }
-
-  .statement-line.accent {
-    margin-left: clamp(48px, 6vw, 110px);
-  }
-
-  .family-tabs button {
-    padding-right: 52px;
-  }
-
+  .family-tabs button { padding-right: 52px; }
   .family-tabs button::before {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    min-width: 26px;
-    padding: 3px 7px;
-    border: 1px solid var(--line);
-    color: var(--muted);
-    background: var(--paper);
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: .66rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
+    position: absolute; top: 16px; right: 16px; min-width: 26px; padding: 3px 7px;
+    border: 1px solid var(--line); color: var(--muted); background: var(--paper);
+    font-family: 'Source Sans 3', sans-serif; font-size: .66rem; font-weight: 700; line-height: 1; text-align: center;
   }
-
   .family-tabs button:nth-child(1)::before { content: '(3)'; }
   .family-tabs button:nth-child(2)::before { content: '(2)'; }
   .family-tabs button:nth-child(3)::before { content: '(1)'; }
   .family-tabs button:nth-child(4)::before { content: '(1)'; }
+  .family-tabs button.active::before { border-color: rgba(15,84,45,.34); color: var(--green); background: var(--paper-2); }
 
-  .family-tabs button.active::before {
-    border-color: rgba(15, 84, 45, .34);
-    color: var(--green);
-    background: var(--paper-2);
-  }
+  .featured-family { animation: family-fade .18s cubic-bezier(.2,0,0,1) both !important; }
+  .featured-family:has(.product-grid > .product:only-child) { grid-template-columns: minmax(220px,.34fr) minmax(0,1fr); }
+  .product-grid:has(> .product:only-child) { grid-template-columns: minmax(0,760px); justify-content: start; }
 
-  .featured-family {
-    animation: family-fade .18s cubic-bezier(.2, 0, 0, 1) both !important;
-  }
+  .product-format { display: inline-flex; width: fit-content; margin-top: 18px; padding: 5px 8px 4px; border: 1px solid rgba(182,31,36,.28); background: rgba(182,31,36,.035); }
+  .claims { gap: 8px; margin-top: 18px; }
+  .claims span { border: 1px solid rgba(15,84,45,.2); border-left: 1px solid rgba(15,84,45,.2); padding: 6px 9px 5px; background: rgba(15,84,45,.045); color: var(--green); font-size: .64rem; letter-spacing: .025em; }
 
-  .featured-family:has(.product-grid > .product:only-child) {
-    grid-template-columns: minmax(220px, .34fr) minmax(0, 1fr);
-  }
-
-  .product-grid:has(> .product:only-child) {
-    grid-template-columns: minmax(0, 760px);
-    justify-content: start;
-  }
-
-  .product-format {
-    display: inline-flex;
-    width: fit-content;
-    margin-top: 18px;
-    padding: 5px 8px 4px;
-    border: 1px solid rgba(182, 31, 36, .28);
-    background: rgba(182, 31, 36, .035);
-  }
-
-  .claims {
-    gap: 8px;
-    margin-top: 18px;
-  }
-
-  .claims span {
-    border: 1px solid rgba(15, 84, 45, .2);
-    border-left: 1px solid rgba(15, 84, 45, .2);
-    padding: 6px 9px 5px;
-    background: rgba(15, 84, 45, .045);
-    color: var(--green);
-    font-size: .64rem;
-    letter-spacing: .025em;
-  }
-
-  .business-section {
-    background: var(--paper-2);
-    color: var(--ink);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .business-section .eyebrow.light {
-    color: var(--green);
-  }
-
-  .business-section > div > p:not(.eyebrow) {
-    color: var(--muted);
-  }
-
-  .business-section .primary-action.inverted {
-    background: var(--green);
-    color: #fff;
-  }
-
-  .business-list {
-    border-top-color: var(--line);
-  }
-
-  .business-list li {
-    border-bottom-color: var(--line);
-    color: var(--ink);
-  }
-
-  .business-list span {
-    color: var(--red);
-  }
+  .business-section { background: var(--paper-2); color: var(--ink); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .business-section .eyebrow.light { color: var(--green); }
+  .business-section > div > p:not(.eyebrow) { color: var(--muted); }
+  .business-section .primary-action.inverted { background: var(--green); color: #fff; }
+  .business-list { border-top-color: var(--line); }
+  .business-list li { border-bottom-color: var(--line); color: var(--ink); }
+  .business-list span { color: var(--red); }
 }
 
-@keyframes family-fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+@keyframes family-fade { from { opacity: 0; } to { opacity: 1; } }
 
 @media (max-width: 640px) {
   .hero h1 { font-size: clamp(3.7rem, 19vw, 4.65rem); }
