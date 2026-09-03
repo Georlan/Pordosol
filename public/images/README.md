@@ -1,11 +1,12 @@
-# Imagens
+# Assets de imagem
 
-Migração em fases a partir do catálogo oficial.
+Os assets oficiais devem vir apenas do catálogo Pôr do Sol ou de material enviado/confirmado pelo responsável.
 
-- Fase 1: Massa 26x32 e correção dos estados de imagem.
-- Fase 2: Massa 15x30 e massas redondas.
-- Fase 3: Micro e mini pizzas.
-- Fase 4: Pães árabes e canudinhos.
-- Fase 5: hero e institucional.
+## Regra de publicação
+- validar visualmente antes do upload;
+- conferir o SHA do blob Git contra o arquivo local quando o upload for binário;
+- nunca inventar rótulos, CNPJ, telefones, claims ou características do produto;
+- se um asset não estiver confirmado, usar o placeholder neutro `imagem-em-preparacao.svg`.
 
-Enquanto um asset ainda não estiver pronto, a interface deve exibir um placeholder editorial em vez de uma imagem quebrada.
+## Hero
+`hero-oficial.jpg` foi extraído do catálogo oficial, otimizado para web e validado pelo SHA do blob Git antes de ser referenciado na landing.
