@@ -12,6 +12,90 @@
   line-height: 1.6;
 }
 
+/* Desktop editorial refinement: rebalance the hero, tighten the manifesto,
+   avoid empty-looking single-product families and break the solid green wall. */
+@media (min-width: 981px) {
+  .hero {
+    grid-template-columns: 1.08fr .92fr;
+    gap: clamp(28px, 3vw, 52px);
+    padding-right: clamp(28px, 4vw, 68px);
+  }
+
+  .hero-copy {
+    padding-right: clamp(34px, 4vw, 72px);
+  }
+
+  .hero-media {
+    align-self: center;
+    min-height: 0;
+    height: min(76vh, 720px);
+    margin: clamp(28px, 4vh, 52px) 0;
+    border: 1px solid var(--line);
+    background: var(--green-dark);
+  }
+
+  .hero-media img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .brand-statement {
+    padding-top: clamp(70px, 6vw, 94px);
+    padding-bottom: clamp(76px, 6.5vw, 104px);
+  }
+
+  .statement-line {
+    font-size: clamp(3.6rem, 5.9vw, 7rem);
+    line-height: .92;
+  }
+
+  .statement-line.accent {
+    margin-left: clamp(48px, 6vw, 110px);
+  }
+
+  .featured-family:has(.product-grid > .product:only-child) {
+    grid-template-columns: minmax(220px, .34fr) minmax(0, 1fr);
+  }
+
+  .product-grid:has(> .product:only-child) {
+    grid-template-columns: minmax(0, 760px);
+    justify-content: start;
+  }
+
+  .business-section {
+    background: var(--paper-2);
+    color: var(--ink);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .business-section .eyebrow.light {
+    color: var(--green);
+  }
+
+  .business-section > div > p:not(.eyebrow) {
+    color: var(--muted);
+  }
+
+  .business-section .primary-action.inverted {
+    background: var(--green);
+    color: #fff;
+  }
+
+  .business-list {
+    border-top-color: var(--line);
+  }
+
+  .business-list li {
+    border-bottom-color: var(--line);
+    color: var(--ink);
+  }
+
+  .business-list span {
+    color: var(--red);
+  }
+}
+
 @media (max-width: 640px) {
   .hero h1 { font-size: clamp(3.7rem, 19vw, 4.65rem); }
   .statement-line { font-size: clamp(3.2rem, 16vw, 4rem); }
