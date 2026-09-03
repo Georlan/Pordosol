@@ -1,0 +1,23 @@
+#inicio,
+#produtos,
+#sobre,
+#negocio,
+#contato {
+  scroll-margin-top: 88px;
+}
+
+.contact-legal p {
+  margin: 0;
+  color: rgba(255,255,255,.8);
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: clamp(3.7rem, 19vw, 4.65rem); }
+  .statement-line { font-size: clamp(3.2rem, 16vw, 4rem); }
+  .products-intro h2 { font-size: clamp(3.4rem, 17vw, 4.5rem); }
+  .family-title h3 { font-size: clamp(3.1rem, 15vw, 3.8rem); }
+  .about-copy h2,
+  .business-section h2,
+  .contact-section h2 { font-size: clamp(3.3rem, 16vw, 4.35rem); }
+}
