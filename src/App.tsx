@@ -21,8 +21,8 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '26 cm × 32 cm',
-    image: '/images/imagem-em-preparacao.svg',
-    imageReady: false,
+    image: '/images/massa-26x32-oficial.svg',
+    imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Nível de crocância elevado', 'Fácil manuseio'],
     claims: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
@@ -32,8 +32,8 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '15 cm × 30 cm',
-    image: '/images/imagem-em-preparacao.svg',
-    imageReady: false,
+    image: '/images/massa-15x30-oficial.svg',
+    imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Nível de crocância elevado', 'Fácil manuseio'],
     claims: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
@@ -43,8 +43,8 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '15 cm de diâmetro / 500 g • 10 cm de diâmetro / 200 g',
-    image: '/images/imagem-em-preparacao.svg',
-    imageReady: false,
+    image: '/images/massa-redonda-oficial.svg',
+    imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Nível de crocância elevado', 'Fácil manuseio'],
     claims: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
@@ -226,7 +226,10 @@ function App() {
         </section>
 
         <section id="sobre" className="about-section">
-          <div className="about-visual"><img src="/images/imagem-em-preparacao.svg" alt="Material visual institucional Pôr do Sol em atualização" onError={useFallback} /><div className="about-number"><strong>30+</strong><span>anos de história</span></div></div>
+          <div className="about-visual">
+            <img src="/images/sobre-fabrica-oficial.svg" alt="Imagem institucional apresentada no catálogo da Pôr do Sol Alimentos" onError={useFallback} />
+            <div className="about-number"><strong>30+</strong><span>anos de história</span></div>
+          </div>
           <div className="about-copy">
             <p className="eyebrow">Sobre nós</p><h2>Uma história feita no Vale do Jaguaribe.</h2>
             <p>A Pôr do Sol Alimentos está sediada em Limoeiro do Norte, Ceará, e atua na produção de massas para pastéis, mini pizzas, pães árabes e outros produtos relacionados, destinados a pequenos empreendedores, supermercados e mercearias.</p>
