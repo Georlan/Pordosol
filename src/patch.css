@@ -24,6 +24,10 @@
     border-bottom: 1px solid var(--line);
     background-color: var(--green-dark);
     background-image: url('/images/hero-produtos-madeira-hq.jpg');
+    background-image: image-set(
+      url('/images/hero-produtos-madeira-hq.webp') type('image/webp'),
+      url('/images/hero-produtos-madeira-hq.jpg') type('image/jpeg')
+    );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 52%;
