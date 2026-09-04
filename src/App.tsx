@@ -22,7 +22,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '26 cm × 32 cm • 2 kg',
-    image: '/images/massa-26x32-hd.webp',
+    image: '/images/massa-26x32-catalogo-v2.svg',
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Nível de crocância elevado', 'Fácil manuseio'],
@@ -33,7 +33,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: '15 cm × 30 cm',
-    image: '/images/massa-15x30-hd.webp',
+    image: embeddedAssets.massa15x30,
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados, com nível de crocância elevado e fácil manuseio.',
     benefits: ['Praticidade para lanches e salgados', 'Nível de crocância elevado', 'Fácil manuseio'],
@@ -44,7 +44,7 @@ const products: Product[] = [
     family: 'Massas para pastel',
     name: 'Massa para pastel, canudinho e lasanha',
     format: 'Linha Preciosa • congelado • 15 cm / 500 g • 10 cm / 200 g',
-    image: '/images/massa-redonda-hd.webp',
+    image: embeddedAssets.massaRedonda,
     imageReady: true,
     description: 'Apresentada no catálogo oficial na linha Preciosa, com indicação de produto congelado. Ideal para quem busca praticidade na hora de fazer lanches e salgados.',
     benefits: ['Nível de crocância elevado', 'Fácil manuseio', 'Produto congelado'],
@@ -55,7 +55,7 @@ const products: Product[] = [
     family: 'Pizzas',
     name: 'Micro pizzas',
     format: '24 unidades por pacote • porção 50 g (1 unidade)',
-    image: '/images/micro-pizzas-hd.webp',
+    image: '/images/micro-pizzas-catalogo.svg',
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
     benefits: ['24 unidades por pacote', 'Preparo rápido', 'Fácil manuseio'],
@@ -66,7 +66,7 @@ const products: Product[] = [
     family: 'Pizzas',
     name: 'Mini pizzas',
     format: '5 unidades por pacote • porção 50 g (1 unidade)',
-    image: '/images/mini-pizzas-hd.webp',
+    image: embeddedAssets.miniPizzas,
     imageReady: true,
     description: 'O catálogo oficial apresenta os sabores Mista, Calabresa, Carne de Sol, Frango e Mussarela. Produto de preparo rápido e fácil manuseio.',
     benefits: ['5 unidades por pacote', 'Preparo rápido', 'Fácil manuseio'],
@@ -77,7 +77,7 @@ const products: Product[] = [
     family: 'Pães',
     name: 'Pães árabes',
     format: '5 unidades por pacote • porção 50 g (1 unidade)',
-    image: '/images/paes-arabes-hd.webp',
+    image: '/images/paes-arabes-catalogo.svg',
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
     benefits: ['5 unidades por pacote', 'Preparo rápido', 'Fácil manuseio'],
@@ -88,7 +88,7 @@ const products: Product[] = [
     family: 'Canudinhos',
     name: 'Canudinhos para rechear',
     format: '50 unidades por pacote',
-    image: '/images/canudinhos-hd.webp',
+    image: embeddedAssets.canudinhos,
     imageReady: true,
     description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados, com preparo rápido e fácil manuseio.',
     benefits: ['50 unidades por pacote', 'Preparo rápido', 'Fácil manuseio'],
@@ -258,7 +258,7 @@ function App() {
 
         <section id="sobre" className="about-section">
           <div className="about-visual">
-            <img src="/images/sobre-fabrica-hd.webp" alt="Imagem institucional apresentada no catálogo da Pôr do Sol Alimentos" onError={useFallback} loading="lazy" />
+            <img src={embeddedAssets.sobre} alt="Imagem institucional apresentada no catálogo da Pôr do Sol Alimentos" onError={useFallback} loading="lazy" />
             <div className="about-number"><strong>30+</strong><span>anos de história</span></div>
           </div>
           <div className="about-copy">
