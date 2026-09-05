@@ -190,7 +190,7 @@ function App() {
             </div>
           </div>
           <figure className="hero-media">
-            <img src="/images/hero-oficial.jpg" alt="Linha de produtos Pôr do Sol apresentada no catálogo oficial" onError={useFallback} fetchPriority="high" />
+            <img src="/images/hero-produtos-madeira-hq.webp" alt="Linha de produtos Pôr do Sol sobre bancada de madeira, com a fábrica ao fundo" onError={useFallback} fetchPriority="high" />
             <figcaption className="hero-caption">Linha de produtos Pôr do Sol</figcaption>
           </figure>
         </section>
