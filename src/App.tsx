@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { KeyboardEvent, SyntheticEvent } from 'react'
 import { embeddedAssets } from './embeddedAssets'
+import { heroHeaderAsset } from './heroHeaderAsset'
 
 type Family = 'Massas para pastel' | 'Pizzas' | 'Pães' | 'Canudinhos'
 
@@ -190,7 +191,7 @@ function App() {
             </div>
           </div>
           <figure className="hero-media">
-            <img src="/images/hero-produtos-madeira-hq.webp" alt="Linha de produtos Pôr do Sol sobre bancada de madeira, com a fábrica ao fundo" onError={useFallback} fetchPriority="high" />
+            <img src={heroHeaderAsset} alt="Linha de produtos Pôr do Sol sobre bancada de madeira, com a fábrica ao fundo" onError={useFallback} fetchPriority="high" />
             <figcaption className="hero-caption">Linha de produtos Pôr do Sol</figcaption>
           </figure>
         </section>
