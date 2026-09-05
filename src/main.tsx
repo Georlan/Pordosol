@@ -4,6 +4,7 @@ import App from './App'
 import './styles.css'
 import './patch.css'
 import './modern.css'
+import './header-refresh.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
