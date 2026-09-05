@@ -6,6 +6,7 @@ import './patch.css'
 import './modern.css'
 import './header-refresh.css'
 import './pro-redesign.css'
+import './logo-approved.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
