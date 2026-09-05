@@ -5,6 +5,7 @@ import './styles.css'
 import './patch.css'
 import './modern.css'
 import './header-refresh.css'
+import './pro-redesign.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
