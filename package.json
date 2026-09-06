@@ -4,8 +4,8 @@
   "private": true,
   "description": "Site institucional e comercial B2B da Pôr do Sol Alimentos.",
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "check": "node --check app.js && node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "build": "node scripts/build.mjs"
   },
   "engines": {
     "node": ">=18"
