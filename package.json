@@ -1,0 +1,13 @@
+{
+  "name": "pordosol-alimentos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional e comercial B2B da Pôr do Sol Alimentos.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check app.js && node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
