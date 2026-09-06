@@ -1,8 +1,8 @@
 # Pôr do Sol Alimentos — Site B2B
 
-Website institucional e comercial estático da **Pôr do Sol Alimentos**, preparado para Cloudflare Pages sem backend e sem custo recorrente de servidor.
+Site institucional e comercial estático da **Pôr do Sol Alimentos**, preparado para Cloudflare Pages.
 
-## Rodar o build
+## Rodar
 
 ```bash
 npm run check
@@ -18,20 +18,18 @@ O build gera a pasta `dist/`.
 - **Root directory:** `/`
 - **Node:** 18 ou superior
 
-O projeto não possui dependências NPM de runtime/build. O Tailwind usado pela interface é carregado via CDN no navegador, então o build é deliberadamente simples e previsível.
+## O que o site entrega
 
-## Funcionalidades
-
-- catálogo B2B com filtros dinâmicos;
-- fichas técnicas por produto;
-- carrinho/cotação persistido em `localStorage`;
-- cotação formatada enviada ao WhatsApp comercial;
-- calculadora interativa para pastelarias;
-- formulário de distribuidores enviado ao WhatsApp;
-- receitas e dicas em modais;
-- mapa e rota para a fábrica;
+- linguagem visual baseada no catálogo oficial;
+- apresentação institucional alinhada à marca;
+- catálogo interativo com filtros;
+- fichas técnicas e informações nutricionais dos produtos;
+- cotação B2B por WhatsApp com carrinho persistido em `localStorage`;
+- captação de distribuidores via formulário para WhatsApp;
+- atendimento comercial por segmento;
+- contato direto, mapa e rotas;
 - SEO local, Open Graph, sitemap e dados estruturados.
 
-## Dados ainda pendentes
+## Diretriz comercial
 
-O PDF oficial, fotos reais e tabelas nutricionais não foram fornecidos como arquivos nesta entrega. Para não inventar dados regulatórios, o site direciona a solicitação do catálogo para o WhatsApp e mantém as informações nutricionais sinalizadas como pendentes.
+Preços, disponibilidade e condições de entrega não são inventados no site: a negociação segue diretamente para o atendimento comercial da fábrica via WhatsApp.
