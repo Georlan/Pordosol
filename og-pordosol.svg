@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#0B0D11"/><stop offset="1" stop-color="#151922"/></linearGradient>
+    <radialGradient id="sun"><stop stop-color="#FFD27D"/><stop offset=".5" stop-color="#F59E0B"/><stop offset="1" stop-color="#EA580C"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="930" cy="315" r="205" fill="url(#sun)" opacity=".9"/>
+  <text x="90" y="205" fill="#F59E0B" font-size="28" font-family="Arial" font-weight="700" letter-spacing="8">PÔR DO SOL ALIMENTOS</text>
+  <text x="90" y="330" fill="white" font-size="98" font-family="Arial" font-weight="800">MASSA QUE</text>
+  <text x="90" y="430" fill="white" font-size="98" font-family="Arial" font-weight="800">VENDE MAIS.</text>
+  <text x="90" y="505" fill="#B4B7C1" font-size="28" font-family="Arial">Fabricante de massas • Limoeiro do Norte - Ceará</text>
+</svg>
