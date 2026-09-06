@@ -10,7 +10,8 @@ const files = [
   'og-pordosol.svg',
   'robots.txt',
   'sitemap.xml',
-  '_headers'
+  '_headers',
+  'Catálogo.Pôr.do.Sol.pdf'
 ];
 
 await rm(dist, { recursive: true, force: true });
@@ -20,4 +21,7 @@ for (const file of files) {
   await cp(resolve(root, file), resolve(dist, file));
 }
 
-console.log(`✓ Cloudflare build pronto em dist/ (${files.length} arquivos)`);
+// Copiar pasta de assets de produção para dist
+await cp(resolve(root, 'assets'), resolve(dist, 'assets'), { recursive: true });
+
+console.log(`✓ Cloudflare build pronto em dist/ (${files.length} arquivos + pasta assets/)`);

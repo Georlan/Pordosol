@@ -5,7 +5,8 @@
   "description": "Site institucional e comercial B2B da Pôr do Sol Alimentos.",
   "scripts": {
     "check": "node scripts/check.mjs",
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "deploy": "node scripts/check.mjs && node scripts/build.mjs && wrangler pages deploy dist --project-name=pordosol"
   },
   "engines": {
     "node": ">=18"
