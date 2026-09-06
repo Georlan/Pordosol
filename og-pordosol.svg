@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3f5f0"/>
+  <polygon points="0,0 600,630 1200,630 1200,0" fill="#169238"/>
+  <circle cx="860" cy="220" r="120" fill="#efc313" opacity="0.95"/>
+  <rect x="72" y="430" width="420" height="10" fill="#d8191d" rx="5"/>
+  <text x="70" y="438" fill="#d8191d" font-size="74" font-family="Arial" font-weight="700">Catálogo</text>
+  <text x="70" y="502" fill="#d8191d" font-size="54" font-family="Arial">de Produtos</text>
+  <text x="650" y="320" fill="#ffffff" font-size="78" font-family="Arial" font-weight="800">PÔR DO SOL</text>
+  <text x="735" y="382" fill="#fff3b8" font-size="34" font-family="Arial" letter-spacing="8">ALIMENTOS</text>
+  <text x="650" y="450" fill="#ffffff" font-size="28" font-family="Arial">Fabricante de massas em Limoeiro do Norte - CE</text>
+</svg>
