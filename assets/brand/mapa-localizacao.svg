@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 420" width="100%" height="100%">
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f6203" flood-opacity="0.12"/>
+    </filter>
+    <filter id="pinShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo suave e borda de apresentação editorial -->
+  <rect width="540" height="420" rx="16" fill="#f8faf8" stroke="#dfe7df" stroke-width="1"/>
+
+  <!-- Título e cabeçalho do mapa -->
+  <g transform="translate(24, 28)">
+    <text font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="800" fill="#178804" letter-spacing="1.5" text-transform="uppercase">Localização Fabril</text>
+    <text y="22" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="800" fill="#1a231e">Limoeiro do Norte • Ceará</text>
+    <text y="40" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#56635c">Pólo produtor e distribuição para o Vale do Jaguaribe e região</text>
+  </g>
+
+  <!-- MAPA DO BRASIL ESTILIZADO (Cinza Claro) -->
+  <g transform="translate(30, 80) scale(0.62)">
+    <!-- Silhueta geral do Brasil -->
+    <path d="M 210,15 
+             C 250,18 290,10 330,25 
+             C 365,38 395,55 425,75 
+             C 455,95 490,115 510,135
+             C 530,155 545,175 550,195
+             C 555,215 540,240 525,260
+             C 510,280 480,310 460,340
+             C 440,370 420,410 395,440
+             C 370,470 340,510 315,535
+             C 295,555 270,570 250,555
+             C 230,540 215,510 205,480
+             C 195,450 185,420 170,390
+             C 155,360 130,340 110,320
+             C 90,300 70,285 55,265
+             C 40,245 35,225 45,210
+             C 60,190 90,180 115,165
+             C 140,150 160,135 175,110
+             C 190,85 195,50 200,30 Z" 
+          fill="#e2e8e2" stroke="#cbd5cb" stroke-width="2" />
+
+    <!-- Divisões regionais sutis -->
+    <!-- Norte / Centro-Oeste -->
+    <path d="M 175,110 Q 230,180 270,260" stroke="#cbd5cb" stroke-width="1.2" stroke-dasharray="3,3" fill="none"/>
+    <!-- Sul / Sudeste -->
+    <path d="M 205,420 Q 320,380 425,360" stroke="#cbd5cb" stroke-width="1.2" stroke-dasharray="3,3" fill="none"/>
+
+    <!-- ESTADO DO CEARÁ DESTACADO (Verde Institucional #178804) -->
+    <!-- Coordenadas ajustadas na curva nordeste do mapa -->
+    <path d="M 435,90 
+             C 455,95 475,108 485,122 
+             C 480,140 472,158 460,170 
+             C 442,165 430,150 425,135 
+             C 422,118 428,102 435,90 Z" 
+          fill="#178804" stroke="#0f6203" stroke-width="2" filter="url(#shadow)" />
+
+    <!-- Linha de conexão do Ceará para a lupa/destaque -->
+    <line x1="465" y1="135" x2="570" y2="110" stroke="#178804" stroke-width="2" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- RECORTE AMPLIADO DO ESTADO DO CEARÁ COM LIMOEIRO DO NORTE -->
+  <g transform="translate(340, 85)">
+    <!-- Card do Ceará ampliado -->
+    <rect width="175" height="235" rx="12" fill="#ffffff" stroke="#178804" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- Topo do card com branding -->
+    <path d="M 1 13 C 1 6.37 6.37 1 13 1 L 162 1 C 168.63 1 174 6.37 174 13 L 174 34 L 1 34 Z" fill="#edf7ec"/>
+    <text x="12" y="23" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="800" fill="#0f6203" letter-spacing="0.5">ESTADO DO CEARÁ</text>
+    <circle cx="158" cy="18" r="4" fill="#178804"/>
+
+    <!-- Contorno do Ceará em destaque -->
+    <g transform="translate(18, 48) scale(0.65)">
+      <!-- Forma detalhada do Ceará -->
+      <path d="M 30,10 
+               C 65,12 110,30 145,55 
+               C 175,78 190,115 195,150 
+               C 190,185 165,225 140,245 
+               C 115,260 85,255 60,240 
+               C 35,220 20,180 15,140 
+               C 10,100 15,55 25,25 Z" 
+            fill="#edf7ec" stroke="#178804" stroke-width="2.5"/>
+
+      <!-- Área do Vale do Jaguaribe -->
+      <path d="M 120,120 
+               C 145,130 165,155 160,180 
+               C 145,195 125,190 115,170 
+               C 110,150 115,135 120,120 Z" 
+            fill="#fdd105" opacity="0.35" stroke="#d9b100" stroke-width="1" stroke-dasharray="3,3"/>
+      
+      <!-- Linhas de relevo/sertão -->
+      <path d="M 45,70 Q 75,90 85,130" stroke="#cbe3ca" stroke-width="1.5" fill="none"/>
+      <path d="M 60,160 Q 90,175 105,210" stroke="#cbe3ca" stroke-width="1.5" fill="none"/>
+
+      <!-- PIN DE LIMOEIRO DO NORTE -->
+      <!-- Coordenadas de Limoeiro no Vale do Jaguaribe (Leste do Ceará) -->
+      <g transform="translate(138, 142)">
+        <!-- Pulso animado -->
+        <circle cx="0" cy="0" r="16" fill="#fdd105" opacity="0.4">
+          <animate attributeName="r" values="8;20;8" dur="2.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Ponto externo -->
+        <circle cx="0" cy="0" r="7" fill="#ffffff" stroke="#d60302" stroke-width="2"/>
+        <!-- Ponto central vermelho -->
+        <circle cx="0" cy="0" r="4" fill="#d60302"/>
+        
+        <!-- Indicador de texto dentro do mapa ampliado -->
+        <g transform="translate(-85, -28)">
+          <rect width="82" height="22" rx="4" fill="#1a231e" filter="url(#pinShadow)"/>
+          <text x="6" y="15" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="700" fill="#ffffff">Limoeiro do N.</text>
+          <polygon points="74,22 80,22 76,27" fill="#1a231e"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Rodapé explicativo do card -->
+    <g transform="translate(12, 218)">
+      <circle cx="4" cy="-4" r="3" fill="#d60302"/>
+      <text x="12" y="0" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" fill="#1a231e">Limoeiro do Norte</text>
+      <text x="105" y="0" font-family="Inter, system-ui, sans-serif" font-size="9.5" fill="#56635c">• Vale do Jaguaribe</text>
+    </g>
+  </g>
+
+  <!-- LEGENDA COMPLETA NO RODAPÉ DO MAPA -->
+  <g transform="translate(24, 385)">
+    <!-- Item 1: Ceará -->
+    <rect x="0" y="0" width="14" height="14" rx="3" fill="#178804"/>
+    <text x="20" y="11" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#33423a">Estado do Ceará</text>
+
+    <!-- Item 2: Limoeiro do Norte -->
+    <circle cx="150" cy="7" r="5" fill="#d60302" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="162" y="11" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#33423a">Fábrica em Limoeiro do Norte</text>
+
+    <!-- Item 3: Brasil -->
+    <rect x="340" y="0" width="14" height="14" rx="3" fill="#e2e8e2" stroke="#cbd5cb" stroke-width="1"/>
+    <text x="360" y="11" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#56635c">Brasil (Sede Regional)</text>
+  </g>
+</svg>

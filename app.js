@@ -1,18 +1,18 @@
 const WHATSAPP = '5588999005560';
 
-// Catálogo oficial de produtos extraído diretamente do Catálogo.Pôr.do.Sol.pdf
+// Catálogo oficial de produtos da Pôr do Sol Alimentos (Limoeiro do Norte - CE)
 const products = [
   {
     id: 'massa-26x32',
     name: 'Massa para pastel, canudinho e lasanha',
     category: 'Massas de Rolo',
     measure: '26cm × 32cm',
-    pack: 'Formato retangular grande • Porção 30g (3/50 un)',
+    pack: 'Formato retangular grande • Porção 30g',
     image: 'assets/products/massa-26x32.png',
     plateImage: 'assets/products/massa-26x32-prato.png',
     origin: 'Página 3 do Catálogo Oficial',
     badges: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
-    description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados. Nível de crocância elevado e fácil manuseio. Versátil para fritura ou forno.',
+    description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados. Nível de crocância elevado e fácil manuseio. Versátil tanto para fritura sequinha quanto para pratos de forno.',
     nutrition: {
       title: 'Informação Nutricional Oficial',
       subtitle: 'Porções por embalagem: cerca de 66g • Porção: 30g (3/50 unidade)',
@@ -37,12 +37,12 @@ const products = [
     name: 'Massa para pastel, canudinho e lasanha',
     category: 'Massas de Rolo',
     measure: '15cm × 30cm',
-    pack: 'Formato intermediário • Porção 30g (1/50 un)',
+    pack: 'Formato médio para porções individuais • Porção 30g',
     image: 'assets/products/massa-15x30.png',
     plateImage: 'assets/products/massa-26x32-prato.png',
     origin: 'Página 4 do Catálogo Oficial',
     badges: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
-    description: 'Ideal para pastelarias, lanchonetes e mercearias que necessitam de agilidade e fechamento perfeito. Elevada crocância e ótimo rendimento.',
+    description: 'Ideal para pastelarias, lanchonetes e mercearias que necessitam de agilidade e fechamento perfeito. Elevada crocância, preparo rápido e ótimo rendimento.',
     nutrition: {
       title: 'Informação Nutricional Oficial',
       subtitle: 'Porções por embalagem: cerca de 66g • Porção: 30g (1/50 unidade)',
@@ -72,7 +72,7 @@ const products = [
     plateImage: 'assets/products/massa-26x32-prato.png',
     origin: 'Página 5 do Catálogo Oficial',
     badges: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
-    description: 'Prontos para rechear e fechar com carretilha ou garfo. Agilidade máxima de produção para pastelarias e lanchonetes sem desperdício de massa.',
+    description: 'Discos prontos para rechear e fechar com garfo ou carretilha. Agilidade na rotina de lanchonetes, pastelarias e festas sem perda de massa.',
     nutrition: {
       title: 'Informação Nutricional Oficial',
       subtitle: 'Porções por embalagem: cerca de 66g • Porção: 30g (1/50 unidade)',
@@ -102,7 +102,7 @@ const products = [
     plateImage: 'assets/products/micro-pizzas-prato.png',
     origin: 'Página 6 do Catálogo Oficial',
     badges: ['Não contém ovos', 'Preparo rápido', 'Fácil manuseio'],
-    description: 'Ideal para quem busca praticidade na hora de fazer lanches e salgados. Preparo rápido, assamento uniforme e crocância na medida certa.',
+    description: 'Ideal para quem busca praticidade na hora de fazer seus lanches e salgados. Preparo rápido, assamento uniforme e crocância garantida.',
     nutrition: {
       title: 'Informações Nutricionais Oficiais',
       subtitle: 'Porção de 50g (1 unidade)',
@@ -125,12 +125,12 @@ const products = [
     name: 'Mini pizzas',
     category: 'Pizzas',
     measure: 'Pacote com 5 unidades',
-    pack: 'Discos individuais tradicionais para lanche',
+    pack: 'Discos individuais tradicionais',
     image: 'assets/products/mini-pizzas.png',
     plateImage: 'assets/products/mini-pizzas-prato.png',
     origin: 'Página 7 do Catálogo Oficial',
     badges: ['Não contém ovos', 'Preparo rápido', 'Fácil manuseio'],
-    description: 'Massa leve com borda crocante e excelente aceitação em supermercados e mercearias. Pronta para montagem rápida e forneamento.',
+    description: 'Massa saborosa com borda crocante e excelente saída em supermercados e mercearias. Prática para montagem e aquecimento rápido.',
     nutrition: {
       title: 'Informações Nutricionais Oficiais',
       subtitle: 'Porção de 50g (1 unidade)',
@@ -158,7 +158,7 @@ const products = [
     plateImage: 'assets/products/paes-arabes-prato.png',
     origin: 'Página 8 do Catálogo Oficial',
     badges: ['Não contém proteína animal', 'Preparo rápido', 'Fácil manuseio'],
-    description: 'Massa tradicional, leve e sem ingredientes de origem animal. Excelente para lanches naturais, beirutes, sanduíches rápidos e acompanhamento de pastas.',
+    description: 'Massa tradicional e macia, sem proteína animal. Excelente para lanches naturais, beirutes, sanduíches e acompanhamentos.',
     nutrition: {
       title: 'Informações Nutricionais Oficiais',
       subtitle: 'Porção de 50g (1 unidade)',
@@ -181,12 +181,12 @@ const products = [
     name: 'Canudinhos para rechear',
     category: 'Canudinhos',
     measure: 'Pacote com 50 unidades',
-    pack: 'Canudos fritos ultracrocantes prontos para uso',
+    pack: 'Canudos fritos ultracrocantes prontos para rechear',
     image: 'assets/products/canudinhos.png',
     plateImage: 'assets/products/canudinhos-prato.png',
     origin: 'Página 9 do Catálogo Oficial',
     badges: ['Não contém ovos', 'Não contém lactose', 'Não contém proteína animal'],
-    description: 'Crocantes, sequinhos e prontos para receber recheios doces (brigadeiro, doce de leite) ou salgados (frango, patês, queijos). 50 unidades por pacote.',
+    description: 'Canudinhos crocantes e sequinhos, prontos para receber recheios doces ou salgados. Contém 50 unidades por pacote com fácil conservação.',
     nutrition: {
       title: 'Informações Nutricionais Oficiais',
       subtitle: 'Porção de 25g (cerca de 5 canudinhos)',
@@ -209,7 +209,7 @@ const products = [
 const filters = ['Todos', 'Massas de Rolo', 'Discos', 'Pizzas', 'Pães', 'Canudinhos', 'Sem proteína animal'];
 let activeFilter = 'Todos';
 
-// Estado do Carrinho B2B / Montador de Cotação
+// Montador de cotações para comércios e lojas
 let cart = {};
 try {
   cart = JSON.parse(localStorage.getItem('pordosol-cart') || '{}');
@@ -224,7 +224,7 @@ function persistCart() {
   try {
     localStorage.setItem('pordosol-cart', JSON.stringify(cart));
   } catch (e) {
-    console.error('Erro ao persistir cotação:', e);
+    console.error('Erro ao salvar cotação:', e);
   }
 }
 
@@ -305,7 +305,7 @@ function renderProducts() {
         </div>
         <div class="product-actions">
           <button type="button" class="mini-btn" data-details="${product.id}">Ficha técnica</button>
-          <button type="button" class="mini-btn primary" data-add="${product.id}">+ Cotar B2B</button>
+          <button type="button" class="mini-btn primary" data-add="${product.id}">+ Pedir cotação</button>
         </div>
       </div>
     </article>
@@ -348,8 +348,8 @@ function renderCart() {
   if (entries.length === 0) {
     container.innerHTML = `
       <div class="cart-empty-state">
-        <p><strong>Nenhum produto selecionado para cotação.</strong></p>
-        <p style="font-size:13px; margin-top:6px;">Navegue pelo catálogo e clique em <em>"+ Cotar B2B"</em> nos itens de interesse do seu comércio ou distribuição.</p>
+        <p><strong>Nenhum item selecionado para cotação.</strong></p>
+        <p style="font-size:13px; margin-top:6px;">Navegue pelo catálogo e clique em <em>"+ Pedir cotação"</em> nos produtos de interesse do seu comércio.</p>
       </div>
     `;
     return;
@@ -396,20 +396,20 @@ function showDetails(id) {
 
     <div class="modal-media-grid">
       <div class="modal-img-card">
-        <img src="${product.image}" alt="Embalagem oficial de ${product.name}">
-        <span>Embalagem Comercial Oficial</span>
+        <img src="${product.image}" alt="Apresentação de ${product.name}">
+        <span>Foto Oficial do Catálogo</span>
       </div>
       <div class="modal-img-card">
         <img src="${product.plateImage}" alt="Apresentação servida de ${product.name}">
-        <span>Apresentação / Rendimento Prático</span>
+        <span>Sugestão de Preparo / Rendimento</span>
       </div>
     </div>
 
-    <div class="product-badges" style="margin-bottom:18px;">
-      ${product.badges.map(b => `<span class="diet-pill" style="font-size:13px; padding:6px 12px;">${b}</span>`).join('')}
+    <div class="product-badges" style="margin-bottom:16px;">
+      ${product.badges.map(b => `<span class="diet-pill" style="font-size:13px; padding:5px 10px;">${b}</span>`).join('')}
     </div>
 
-    <p style="margin:0 0 16px; font-size:15px; color:#3a4740; line-height:1.6;">
+    <p style="margin:0 0 16px; font-size:14.5px; color:#3a4740; line-height:1.6;">
       ${product.description}
     </p>
 
@@ -438,12 +438,12 @@ function showDetails(id) {
     </div>
 
     <div class="modal-source-tag">
-      <strong>Origem do dado:</strong> ${product.origin} • Fábrica Pôr do Sol Alimentos, Limoeiro do Norte - CE.
+      <strong>Origem dos dados:</strong> ${product.origin} • Fábrica Pôr do Sol Alimentos, Limoeiro do Norte - CE.
     </div>
 
-    <div style="margin-top:24px; display:flex; gap:12px; justify-content:flex-end;">
+    <div style="margin-top:20px; display:flex; gap:12px; justify-content:flex-end;">
       <button type="button" class="ghost-btn" onclick="closeModal()">Fechar</button>
-      <button type="button" class="cta-btn" onclick="addToCart('${product.id}'); closeModal();">Adicionar à cotação B2B</button>
+      <button type="button" class="cta-btn" onclick="addToCart('${product.id}'); closeModal();">Adicionar à cotação</button>
     </div>
   `;
 
@@ -488,14 +488,14 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Formulário do Montador de Cotação B2B (Dispara para WhatsApp comercial)
+  // Formulário do Montador de Cotação (Dispara para WhatsApp comercial)
   const quoteForm = $('#quoteForm');
   if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const entries = Object.entries(cart);
       if (entries.length === 0) {
-        alert('Por favor, adicione pelo menos um produto do catálogo à sua cotação antes de enviar.');
+        alert('Por favor, adicione pelo menos um produto do catálogo antes de enviar a cotação.');
         return;
       }
 
@@ -504,13 +504,13 @@ window.addEventListener('DOMContentLoaded', () => {
       const cidade = $('#quoteCidade')?.value.trim() || 'Não informado';
       const obs = $('#quoteObs')?.value.trim() || '';
 
-      let text = `*SOLICITAÇÃO DE COTAÇÃO B2B - PÔR DO SOL ALIMENTOS*\n\n`;
+      let text = `*SOLICITAÇÃO DE COTAÇÃO - PÔR DO SOL ALIMENTOS*\n\n`;
       text += `*Responsável:* ${nome}\n`;
       text += `*Empresa / Estabelecimento:* ${empresa}\n`;
       text += `*Cidade/UF:* ${cidade}\n`;
       if (obs) text += `*Observações:* ${obs}\n`;
 
-      text += `\n*ITENS SOLICITADOS NO CATÁLOGO:*\n`;
+      text += `\n*ITENS SELECIONADOS NO CATÁLOGO:*\n`;
       entries.forEach(([id, qty]) => {
         const prod = products.find(p => p.id === id);
         if (prod) {
@@ -518,14 +518,14 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      text += `\n_Mensagem enviada via Catálogo Digital da Pôr do Sol Alimentos._`;
+      text += `\n_Mensagem enviada via catálogo digital da fábrica._`;
 
       const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank', 'noopener,noreferrer');
     });
   }
 
-  // Formulário de captação de distribuidores
+  // Formulário de contato comercial para distribuidores e revendedores
   const distributorForm = $('#distributorForm');
   if (distributorForm) {
     distributorForm.addEventListener('submit', (e) => {
@@ -536,19 +536,19 @@ window.addEventListener('DOMContentLoaded', () => {
       const doc = $('#distDoc')?.value.trim() || '';
       const cidade = $('#distCidade')?.value.trim() || '';
       const tel = $('#distTel')?.value.trim() || '';
-      const segmento = $('#distSegmento')?.value || 'Distribuição regional';
+      const segmento = $('#distSegmento')?.value || 'Distribuição de alimentos';
       const frota = $('#distFrota')?.value.trim() || '';
 
-      let text = `*INTERESSE EM DISTRIBUIÇÃO - PÔR DO SOL ALIMENTOS*\n\n`;
-      text += `*Contato:* ${nome}\n`;
+      let text = `*CONTATO COMERCIAL - DISTRIBUIÇÃO E REVENDA*\n\n`;
+      text += `*Responsável:* ${nome}\n`;
       text += `*Empresa:* ${empresa}\n`;
       if (doc) text += `*CNPJ/CPF:* ${doc}\n`;
       text += `*Cidade / Região:* ${cidade}\n`;
       text += `*WhatsApp/Telefone:* ${tel}\n`;
-      text += `*Segmento de interesse:* ${segmento}\n`;
-      if (frota) text += `*Estrutura logística / frota:* ${frota}\n`;
+      text += `*Segmento:* ${segmento}\n`;
+      if (frota) text += `*Informações de rota / logística:* ${frota}\n`;
 
-      text += `\n_Cadastro enviado pelo portal comercial da fábrica._`;
+      text += `\n_Mensagem enviada pelo site oficial da fábrica._`;
 
       const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank', 'noopener,noreferrer');
@@ -556,7 +556,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Expõe globalmente para botões inline de onclick
+// Expõe globalmente
 window.addToCart = addToCart;
 window.changeQty = changeQty;
 window.showDetails = showDetails;

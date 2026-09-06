@@ -7,7 +7,7 @@
 :root {
   --green: #178804;
   --green-dark: #0f6203;
-  --green-deep: #0a4602;
+  --green-deep: #0b2611;
   --green-soft: #edf7ec;
   --green-border: #cbe3ca;
   --red: #d60302;
@@ -86,7 +86,7 @@ img {
 .topbar-info {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .topbar-badge {
@@ -131,8 +131,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
-  gap: 24px;
+  padding: 10px 0;
+  gap: 20px;
 }
 
 .logo {
@@ -142,7 +142,7 @@ header {
 }
 
 .logo-img {
-  height: 52px;
+  height: 50px;
   width: auto;
   object-fit: contain;
 }
@@ -156,20 +156,20 @@ header {
 }
 
 .logo-tagline strong {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--green-dark);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-weight: 800;
+  letter-spacing: 0.04em;
 }
 
 .logo-tagline span {
-  font-size: 11px;
+  font-size: 11.5px;
   color: var(--muted);
 }
 
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 22px;
   font-size: 14px;
   font-weight: 600;
   color: #33423a;
@@ -278,15 +278,6 @@ header {
   background: var(--green-dark);
 }
 
-.mini-btn.danger {
-  border-color: #fca5a5;
-  color: #b91c1c;
-}
-
-.mini-btn.danger:hover {
-  background: #fef2f2;
-}
-
 .cart-count {
   background: var(--yellow);
   color: #000;
@@ -299,7 +290,6 @@ header {
 
 /* ==========================================================================
    HERO SECTION (IDENTIDADE DA CAPA DO CATÁLOGO)
-   Branco dominante, corte diagonal verde sutil, detalhes em vermelho e amarelo
    ========================================================================== */
 .hero {
   position: relative;
@@ -313,7 +303,7 @@ header {
   position: absolute;
   top: 0;
   right: -5%;
-  width: 48%;
+  width: 46%;
   height: 100%;
   background: linear-gradient(135deg, #178804 0%, #0f6203 100%);
   clip-path: polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -361,8 +351,8 @@ header {
 
 .hero h1 {
   margin: 0 0 18px;
-  font-size: clamp(34px, 4.2vw, 50px);
-  line-height: 1.15;
+  font-size: clamp(34px, 4.2vw, 48px);
+  line-height: 1.16;
   font-weight: 800;
   color: var(--text);
   letter-spacing: -0.02em;
@@ -378,8 +368,8 @@ header {
 
 .hero-sub {
   margin: 0 0 24px;
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 16.5px;
+  line-height: 1.65;
   color: var(--muted);
 }
 
@@ -394,7 +384,7 @@ header {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -405,8 +395,8 @@ header {
 }
 
 .hero-diet-badge img {
-  width: 22px;
   height: 22px;
+  width: auto;
   object-fit: contain;
 }
 
@@ -414,7 +404,7 @@ header {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
 }
 
 .hero-stats {
@@ -422,7 +412,7 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   border-top: 1px solid var(--line);
-  padding-top: 24px;
+  padding-top: 22px;
 }
 
 .stat-item {
@@ -431,7 +421,7 @@ header {
 }
 
 .stat-item strong {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 800;
   color: var(--green-dark);
   line-height: 1;
@@ -474,15 +464,9 @@ header {
   position: absolute;
   top: -20px;
   right: -20px;
-  width: 130px;
+  width: 125px;
   height: auto;
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
-  animation: floatSelo 4s ease-in-out infinite;
-}
-
-@keyframes floatSelo {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
 }
 
 .hero-caption {
@@ -507,7 +491,7 @@ header {
    SEÇÕES GERAIS
    ========================================================================== */
 section {
-  padding: 72px 0;
+  padding: 68px 0;
 }
 
 .section-head {
@@ -515,7 +499,7 @@ section {
   grid-template-columns: 1fr 0.8fr;
   gap: 24px;
   align-items: flex-end;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
   border-bottom: 2px solid var(--line);
   padding-bottom: 20px;
 }
@@ -542,7 +526,7 @@ section {
 
 .section-head h2 {
   margin: 0;
-  font-size: clamp(28px, 3.2vw, 38px);
+  font-size: clamp(28px, 3.2vw, 36px);
   font-weight: 800;
   color: var(--text);
   line-height: 1.15;
@@ -551,7 +535,7 @@ section {
 .section-head p {
   margin: 0;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 15.5px;
 }
 
 .card {
@@ -568,55 +552,46 @@ section {
 }
 
 /* ==========================================================================
-   SEÇÃO INSTITUCIONAL / PÁGINA 2 DO CATÁLOGO
+   SEÇÃO INSTITUCIONAL / A FÁBRICA
    ========================================================================== */
 .about-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 24px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: stretch;
 }
 
 .about-banner {
-  background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+  background: linear-gradient(140deg, #178804 0%, #0d5402 100%);
   color: #ffffff;
   border-radius: var(--radius-lg);
   padding: 36px;
   box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
-}
-
-.about-banner::after {
-  content: "";
-  position: absolute;
-  right: -30px;
-  bottom: -30px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: var(--yellow);
-  opacity: 0.12;
-  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .about-banner h3 {
   margin: 0 0 16px;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 800;
   color: #ffffff;
 }
 
 .about-banner p {
-  font-size: 16px;
+  font-size: 15.5px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.92);
-  margin: 0 0 18px;
+  margin: 0 0 16px;
 }
 
 .about-checks {
   list-style: none;
   padding: 0;
-  margin: 22px 0 0;
+  margin: 20px 0 0;
   display: grid;
   gap: 12px;
 }
@@ -625,7 +600,7 @@ section {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 15px;
+  font-size: 14.5px;
   color: rgba(255, 255, 255, 0.95);
 }
 
@@ -634,8 +609,8 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: var(--yellow);
   color: #000;
@@ -645,69 +620,48 @@ section {
   margin-top: 2px;
 }
 
-.about-side {
+.about-map-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.map-card {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 24px;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 
-.map-img {
-  max-width: 240px;
+.about-map-svg {
+  width: 100%;
   height: auto;
-  margin: 12px 0;
-  object-fit: contain;
-}
-
-.map-info strong {
   display: block;
-  font-size: 17px;
-  color: var(--green-dark);
 }
 
-.map-info span {
-  display: block;
-  font-size: 13px;
-  color: var(--muted);
-  margin-top: 4px;
-}
-
-.factory-features {
+.factory-pillars {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 28px;
 }
 
-.feature-box {
+.pillar-box {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 16px;
+  padding: 18px 20px;
   border-top: 3px solid var(--green);
 }
 
-.feature-box strong {
+.pillar-box strong {
   display: block;
   font-size: 15px;
   color: var(--text);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
-.feature-box span {
+.pillar-box span {
   font-size: 13px;
   color: var(--muted);
-  line-height: 1.4;
+  line-height: 1.45;
   display: block;
 }
 
@@ -729,7 +683,7 @@ section {
 }
 
 .segment-header {
-  padding: 16px 22px;
+  padding: 14px 20px;
   background: var(--green-soft);
   border-bottom: 1px solid var(--line);
   display: flex;
@@ -738,7 +692,7 @@ section {
 }
 
 .segment-header .title {
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -746,15 +700,15 @@ section {
 }
 
 .segment-body {
-  padding: 24px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .segment-body h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
+  margin: 0 0 8px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--text);
 }
@@ -794,13 +748,13 @@ section {
 }
 
 /* ==========================================================================
-   CATÁLOGO DE PRODUTOS & FILTROS
+   CATÁLOGO DE PRODUTOS & CARDS PADRONIZADOS
    ========================================================================== */
 .filters-wrap {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   align-items: center;
 }
 
@@ -810,7 +764,7 @@ section {
   border: 1px solid var(--line);
   background: #ffffff;
   color: var(--text);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
@@ -830,7 +784,7 @@ section {
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 22px;
 }
 
 .product-card {
@@ -850,10 +804,11 @@ section {
   border-color: var(--green-border);
 }
 
+/* Bloco de imagem padronizado e com respiro limpo */
 .product-img-box {
   position: relative;
   background: #ffffff;
-  padding: 20px;
+  padding: 14px 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -865,39 +820,44 @@ section {
 .product-img-box img {
   max-height: 100%;
   max-width: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  margin: auto;
+  transition: transform 0.25s ease;
 }
 
 .product-card:hover .product-img-box img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .product-cat-tag {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 10px;
+  left: 10px;
   background: var(--green-soft);
   color: var(--green-dark);
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 4px 10px;
+  letter-spacing: 0.06em;
+  padding: 4px 8px;
   border-radius: 4px;
   border: 1px solid var(--green-border);
+  z-index: 2;
 }
 
 .product-measure-badge {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 10px;
+  right: 10px;
   background: var(--red);
   color: #ffffff;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 800;
-  padding: 4px 10px;
+  padding: 4px 8px;
   border-radius: 4px;
+  z-index: 2;
 }
 
 .product-info {
@@ -909,7 +869,7 @@ section {
 
 .product-info h3 {
   margin: 0 0 6px;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 800;
   color: var(--text);
   line-height: 1.25;
@@ -919,11 +879,11 @@ section {
   font-size: 13px;
   font-weight: 600;
   color: var(--green-dark);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .product-desc {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   font-size: 13px;
   color: var(--muted);
   line-height: 1.5;
@@ -988,7 +948,7 @@ section {
 }
 
 /* ==========================================================================
-   SEÇÃO COMERCIAL B2B
+   SEÇÃO ATENDIMENTO COMERCIAL
    ========================================================================== */
 .tools-grid {
   display: grid;
@@ -1000,7 +960,7 @@ section {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 28px 24px;
+  padding: 26px 22px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1009,7 +969,7 @@ section {
 }
 
 .tool-num {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 900;
   color: var(--green-dark);
   line-height: 1;
@@ -1018,12 +978,12 @@ section {
 
 .tool-card h3 {
   margin: 0 0 10px;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 800;
 }
 
 .tool-card p {
-  margin: 0 0 20px;
+  margin: 0 0 18px;
   font-size: 14px;
   color: var(--muted);
   line-height: 1.5;
@@ -1037,7 +997,7 @@ section {
 }
 
 /* ==========================================================================
-   FORMULÁRIO DISTRIBUIDOR
+   DISTRIBUIÇÃO E PARCERIAS
    ========================================================================== */
 .distributor-layout {
   display: grid;
@@ -1055,7 +1015,7 @@ section {
 
 .distributor-info-card h3 {
   margin: 0 0 12px;
-  font-size: 22px;
+  font-size: 21px;
   color: var(--green-dark);
 }
 
@@ -1063,6 +1023,7 @@ section {
   margin: 0 0 18px;
   font-size: 14px;
   color: var(--muted);
+  line-height: 1.6;
 }
 
 .distributor-form-card {
@@ -1116,7 +1077,7 @@ section {
 }
 
 /* ==========================================================================
-   DICAS TÉCNICAS (INSPIRADAS NA NITA E NO CATÁLOGO)
+   DICAS TÉCNICAS
    ========================================================================== */
 .tips-grid {
   display: grid;
@@ -1206,12 +1167,12 @@ section {
 }
 
 /* ==========================================================================
-   RODAPÉ
+   RODAPÉ LIMPO E INSTITUCIONAL
    ========================================================================== */
 footer {
-  background: #111a14;
-  color: #b0beb5;
-  padding: 48px 0 24px;
+  background: var(--green-deep);
+  color: #c0cfc5;
+  padding: 44px 0 24px;
   font-size: 14px;
   border-top: 4px solid var(--green);
 }
@@ -1220,28 +1181,35 @@ footer {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr 1fr;
   gap: 36px;
-  padding-bottom: 36px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.footer-brand img {
-  height: 48px;
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  height: 52px;
   width: auto;
+  object-fit: contain;
   margin-bottom: 14px;
-  background: #ffffff;
-  padding: 4px 8px;
-  border-radius: 6px;
+  background: transparent;
+  padding: 0;
 }
 
 .footer-brand p {
   margin: 0;
   line-height: 1.6;
+  font-size: 13.5px;
 }
 
 .footer-nav strong, .footer-contact strong {
   display: block;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 14.5px;
   margin-bottom: 14px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1260,17 +1228,17 @@ footer {
 }
 
 .footer-bottom {
-  padding-top: 24px;
+  padding-top: 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  font-size: 13px;
+  font-size: 12.5px;
 }
 
 /* ==========================================================================
-   DRAWER / MONTADOR DE COTAÇÃO B2B
+   DRAWER / MONTADOR DE COTAÇÃO
    ========================================================================== */
 .drawer {
   position: fixed;
@@ -1318,14 +1286,14 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 24px;
+  padding: 18px 24px;
   border-bottom: 1px solid var(--line);
   background: var(--green-soft);
 }
 
 .drawer-head h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 800;
   color: var(--green-dark);
 }
@@ -1466,20 +1434,20 @@ footer {
 
 .modal-header {
   padding-right: 48px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   border-bottom: 1px solid var(--line);
   padding-bottom: 16px;
 }
 
 .modal-header h3 {
   margin: 4px 0;
-  font-size: 28px;
+  font-size: 26px;
   color: var(--green-dark);
 }
 
 .modal-measure {
   color: var(--red);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
 }
 
@@ -1487,7 +1455,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .modal-img-card {
@@ -1519,7 +1487,7 @@ footer {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .modal-nutri table {
@@ -1576,6 +1544,9 @@ footer {
   .products-grid, .segment-grid, .tools-grid, .tips-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .factory-pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .footer-top {
     grid-template-columns: 1fr 1fr;
   }
@@ -1610,7 +1581,7 @@ footer {
   .topbar-links {
     display: none;
   }
-  .products-grid, .segment-grid, .tools-grid, .tips-grid, .contact-grid, .factory-features, .form-grid {
+  .products-grid, .segment-grid, .tools-grid, .tips-grid, .contact-grid, .factory-pillars, .form-grid {
     grid-template-columns: 1fr;
   }
   .form-group.full {
