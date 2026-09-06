@@ -103,7 +103,7 @@ const products = [
         ['Fibra alimentar','0,2g','1%'],
         ['Sódio','605mg','25%']
       ],
-      foot:'Valores extraídos visualmente do catálogo oficial.'
+      foot:'*Valores conforme informações nutricionais apresentadas no catálogo oficial.'
     }
   },
   {
@@ -128,7 +128,7 @@ const products = [
         ['Fibra alimentar','0,2g','1%'],
         ['Sódio','605mg','25%']
       ],
-      foot:'Valores extraídos visualmente do catálogo oficial.'
+      foot:'*Valores conforme informações nutricionais apresentadas no catálogo oficial.'
     }
   },
   {
@@ -153,7 +153,7 @@ const products = [
         ['Fibra alimentar','-','-'],
         ['Sódio','574mg','24%']
       ],
-      foot:'Valores extraídos visualmente do catálogo oficial.'
+      foot:'*Valores conforme informações nutricionais apresentadas no catálogo oficial.'
     }
   },
   {
@@ -178,7 +178,7 @@ const products = [
         ['Fibra alimentar','0,1g','1%'],
         ['Sódio','360mg','15%']
       ],
-      foot:'Valores extraídos visualmente do catálogo oficial.'
+      foot:'*Valores conforme informações nutricionais apresentadas no catálogo oficial.'
     }
   }
 ];
