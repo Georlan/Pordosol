@@ -445,12 +445,12 @@ header {
 .hero-composition-wrap {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 560px;
   background: #ffffff;
-  padding: 16px;
+  padding: 18px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
 }
 
 .hero-composition-img {
