@@ -2,73 +2,295 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Pôr do Sol Alimentos, fabricante de massas em Limoeiro do Norte - CE. Desde 1995, com massas para pastel, mini e micro pizzas, pão árabe e canudinhos.">
-  <meta name="theme-color" content="#087522">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pôr do Sol Alimentos — fabricante de massas em Limoeiro do Norte, Ceará. Desde 1995, com linha de massas para pastel, discos, mini e micro pizzas, pão árabe e canudinhos.">
+  <meta name="theme-color" content="#0c5528">
   <meta property="og:title" content="Pôr do Sol Alimentos | Desde 1995">
-  <meta property="og:description" content="Conheça a linha de produtos Pôr do Sol Alimentos.">
+  <meta property="og:description" content="Conheça a linha de produtos Pôr do Sol Alimentos e fale com o atendimento comercial.">
   <meta property="og:type" content="website">
-  <title>Pôr do Sol Alimentos | Desde 1995</title>
+  <title>Pôr do Sol Alimentos | Massas desde 1995</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" href="assets/logo-oficial.webp" as="image">
   <link rel="preload" href="assets/linha-produtos.webp" as="image">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-<header class="site-header" id="topo">
-  <div class="brand-stripe" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="container header-inner">
-    <a class="brand" href="#topo" aria-label="Pôr do Sol Alimentos — início"><img src="assets/logo-oficial.webp" alt="Pôr do Sol Alimentos" width="260" height="138"></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu"><span></span><span></span><span></span></button>
-    <nav class="site-nav" id="site-nav" aria-label="Navegação principal"><a href="#produtos">Produtos</a><a href="#empresa">Empresa</a><a href="#qualidade">Qualidade</a><a href="#comercial">Comercial</a><a href="#contato">Contato</a></nav>
-    <a class="btn btn-primary header-cta wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Vim pelo site da Pôr do Sol Alimentos e gostaria de falar com o comercial.">WhatsApp comercial</a>
-  </div>
-</header>
-<main id="conteudo">
-  <section class="hero">
-    <div class="hero-grid-pattern" aria-hidden="true"></div><div class="hero-sun" aria-hidden="true"></div>
-    <div class="container hero-layout">
-      <div class="hero-copy reveal">
-        <p class="eyebrow light">Fabricante de massas • Limoeiro do Norte - CE</p>
-        <h1>Tradição em massas desde <span>1995.</span></h1>
-        <p class="hero-lead">Há mais de 30 anos, a Pôr do Sol Alimentos produz massas para pastéis, mini pizzas, pães árabes e outros produtos relacionados, atendendo diferentes perfis de consumidores e negócios.</p>
-        <div class="hero-actions"><a class="btn btn-sun" href="#produtos">Conheça a linha</a><a class="btn btn-ghost wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Quero conhecer a linha de produtos da Pôr do Sol Alimentos.">Falar com o comercial</a></div>
-        <div class="hero-facts"><div><strong>1995</strong><span>ano de fundação</span></div><div><strong>30+</strong><span>anos de história</span></div><div><strong>250 m²</strong><span>campo fabril informado no catálogo</span></div></div>
-      </div>
-      <div class="hero-visual reveal delay">
-        <div class="visual-card"><div class="visual-top"><img src="assets/logo-oficial.webp" alt="Pôr do Sol Alimentos" width="260" height="138"><b>Desde 1995</b></div><img class="lineup" src="assets/linha-produtos.webp" alt="Linha de produtos Pôr do Sol Alimentos" width="480" height="149"></div>
-        <p class="visual-note">Produtos apresentados no catálogo institucional da marca.</p>
-      </div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="brand-line" aria-hidden="true"></div>
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="Pôr do Sol Alimentos — início">
+        <img src="assets/logo-oficial.webp" width="720" height="396" alt="Pôr do Sol Alimentos">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <a href="#produtos">Produtos</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#qualidade">Qualidade</a>
+        <a href="#comercial">Comercial</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="button button-red header-cta wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Vim pelo site da Pôr do Sol Alimentos e gostaria de falar com o comercial.">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.25-1.38A10 10 0 1 0 12 2Zm5.65 14.18c-.24.68-1.41 1.3-1.96 1.36-.5.05-1.13.08-1.82-.14-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.18-4.94-4.37-.14-.2-1.18-1.57-1.18-3 0-1.42.74-2.12 1-2.41.26-.29.58-.36.77-.36h.55c.18 0 .41-.07.64.49.24.58.81 1.98.88 2.12.08.14.12.31.03.5-.09.2-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.17.29.74 1.23 1.59 1.99 1.09.97 2.01 1.27 2.3 1.41.29.14.46.12.63-.08.17-.2.72-.84.91-1.13.19-.28.38-.24.64-.14.27.09 1.69.8 1.98.94.29.14.48.21.55.33.07.12.07.69-.17 1.37Z"/></svg>
+        WhatsApp comercial
+      </a>
     </div>
-  </section>
-  <section class="trust-bar"><div class="container trust-grid"><span>Pequenos empreendedores</span><span>Supermercados</span><span>Mercearias</span><span>Distribuidores regionais</span></div></section>
+  </header>
 
-  <section class="section products" id="produtos">
-    <div class="container">
-      <div class="heading reveal"><p class="eyebrow green">Linha Pôr do Sol</p><h2>Produtos reais do catálogo.</h2><p>Informações, formatos e quantidades abaixo seguem o material institucional fornecido pela Pôr do Sol Alimentos.</p></div>
-      <div class="product-grid">
-        <article class="product-card reveal"><div class="product-media yellow"><div class="product-photo p1" role="img" aria-label="Massa Pôr do Sol 26 por 32 centímetros"></div><em>26 × 32 cm</em></div><div class="product-body"><small>Massa para pastel, canudinho e lasanha</small><h3>Massa 26 × 32 cm</h3><p>Praticidade para lanches e salgados, nível de crocância elevado e fácil manuseio.</p><div class="tags"><span>Não contém ovos</span><span>Não contém lactose</span><span>Sem proteína animal</span></div><a class="product-link wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre a Massa 26 x 32 cm da Pôr do Sol.">Pedir informações →</a></div></article>
-        <article class="product-card reveal delay"><div class="product-media greenbg"><div class="product-photo p2" role="img" aria-label="Massa Pôr do Sol 15 por 30 centímetros"></div><em>15 × 30 cm</em></div><div class="product-body"><small>Massa para pastel, canudinho e lasanha</small><h3>Massa 15 × 30 cm</h3><p>Praticidade para lanches e salgados, nível de crocância elevado e fácil manuseio.</p><div class="tags"><span>Não contém ovos</span><span>Não contém lactose</span><span>Sem proteína animal</span></div><a class="product-link wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre a Massa 15 x 30 cm da Pôr do Sol.">Pedir informações →</a></div></article>
-        <article class="product-card reveal"><div class="product-media cream"><div class="product-photo p3" role="img" aria-label="Discos de massa Pôr do Sol"></div><em>500 g / 200 g</em></div><div class="product-body"><small>Discos de massa</small><h3>Discos para pastel</h3><p>15 cm de diâmetro / 500 g e 10 cm de diâmetro / 200 g, com praticidade e fácil manuseio.</p><a class="product-link wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre os discos de massa da Pôr do Sol.">Pedir informações →</a></div></article>
-        <article class="product-card reveal"><div class="product-media redbg"><div class="product-photo p4" role="img" aria-label="Micro pizzas Pôr do Sol"></div><em>24 unidades</em></div><div class="product-body"><small>Preparo rápido</small><h3>Micro pizzas</h3><p>Praticidade, preparo rápido e fácil manuseio. O catálogo informa 24 unidades por pacote.</p><div class="tags"><span>Não contém ovos</span></div><a class="product-link wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre as Micro Pizzas da Pôr do Sol.">Pedir informações →</a></div></article>
-        <article class="product-card reveal"><div class="product-media yellow"><div class="product-photo p5" role="img" aria-label="Mini pizzas Pôr do Sol"></div><em>5 unidades</em></div><div class="product-body"><small>Preparo rápido</small><h3>Mini pizzas</h3><p>Praticidade, preparo rápido e fácil manuseio. O catálogo informa 5 unidades por pacote.</p><div class="tags"><span>Não contém ovos</span></div><a class="product-link wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre as Mini Pizzas da Pôr do Sol.">Pedir informações →</a></div></article>
-        <article class="product-card reveal"><div class="product-media greenbg"><div class="product-photo p6" role="img" aria-label="Pão árabe Pôr do Sol"></div><em>5 unidades</em></div><div class="product-body"><small>Pães árabes</small><h3>Pão árabe</h3><p>Praticidade, preparo rápido e fácil manuseio. O catálogo informa 5 unidades por pacote.</p><div class="tags"><span>Sem proteína animal</span></div><a class="product-link wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre o Pão Árabe da Pôr do Sol.">Pedir informações →</a></div></article>
-        <article class="product-card wide reveal"><div class="product-media cream"><div class="product-photo p7" role="img" aria-label="Canudinhos para rechear Pôr do Sol"></div><em>50 unidades</em></div><div class="product-body"><small>Canudinhos para rechear</small><h3>Canudinhos</h3><p>Praticidade, preparo rápido e fácil manuseio. O catálogo informa 50 unidades por pacote.</p><div class="tags"><span>Não contém ovos</span><span>Não contém lactose</span><span>Sem proteína animal</span></div><a class="product-link wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre os Canudinhos para Rechear da Pôr do Sol.">Pedir informações →</a></div></article>
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow eyebrow-light">Pôr do Sol Alimentos • Limoeiro do Norte - CE</p>
+          <h1 id="hero-title">Tradição que chega à mesa <span>desde 1995.</span></h1>
+          <p class="hero-lead">Mais de 30 anos produzindo uma linha de massas para diferentes momentos de consumo e para quem trabalha todos os dias com alimentação.</p>
+          <div class="hero-actions">
+            <a class="button button-yellow" href="#produtos">Conheça nossos produtos</a>
+            <a class="button button-outline wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Quero conhecer a linha de produtos da Pôr do Sol Alimentos.">Falar com o comercial</a>
+          </div>
+          <div class="hero-metrics" aria-label="Informações institucionais">
+            <article><strong>1995</strong><span>ano de fundação</span></article>
+            <article><strong>30+</strong><span>anos de história</span></article>
+            <article><strong>250 m²</strong><span>campo fabril informado no catálogo</span></article>
+          </div>
+        </div>
+
+        <div class="hero-stage reveal reveal-delay">
+          <div class="hero-badge"><span>DESDE</span><strong>1995</strong></div>
+          <div class="stage-ring" aria-hidden="true"></div>
+          <img class="hero-logo" src="assets/logo-oficial.webp" width="720" height="396" alt="Pôr do Sol Alimentos">
+          <img class="hero-lineup" src="assets/linha-produtos.webp" width="900" height="293" alt="Linha de produtos Pôr do Sol Alimentos">
+          <div class="stage-caption">Linha apresentada no catálogo institucional</div>
+        </div>
       </div>
+    </section>
+
+    <section class="audience-strip" aria-label="Públicos atendidos">
+      <div class="container audience-grid">
+        <span>Pequenos empreendedores</span>
+        <span>Supermercados</span>
+        <span>Mercearias</span>
+        <span>Distribuidores regionais</span>
+      </div>
+    </section>
+
+    <section class="section products" id="produtos" aria-labelledby="products-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow eyebrow-green">Linha Pôr do Sol</p>
+            <h2 id="products-title">Produtos do catálogo, apresentados com clareza.</h2>
+          </div>
+          <p>Formatos, quantidades e características abaixo seguem o material institucional fornecido pela Pôr do Sol Alimentos.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <div class="product-visual tone-yellow">
+              <span class="product-code">26 × 32 cm</span>
+              <div class="product-art art-p1" role="img" aria-label="Massa Pôr do Sol 26 por 32 centímetros"></div>
+            </div>
+            <div class="product-content">
+              <p class="product-kicker">Pastel, canudinho e lasanha</p>
+              <h3>Massa 26 × 32 cm</h3>
+              <p>Praticidade para lanches e salgados, com nível de crocância elevado e fácil manuseio.</p>
+              <a class="product-cta wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre a Massa 26 x 32 cm da Pôr do Sol.">Pedir informações <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal reveal-delay">
+            <div class="product-visual tone-green">
+              <span class="product-code">15 × 30 cm</span>
+              <div class="product-art art-p2" role="img" aria-label="Massa Pôr do Sol 15 por 30 centímetros"></div>
+            </div>
+            <div class="product-content">
+              <p class="product-kicker">Pastel, canudinho e lasanha</p>
+              <h3>Massa 15 × 30 cm</h3>
+              <p>Praticidade para lanches e salgados, com nível de crocância elevado e fácil manuseio.</p>
+              <a class="product-cta wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre a Massa 15 x 30 cm da Pôr do Sol.">Pedir informações <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-visual tone-cream">
+              <span class="product-code">500 g / 200 g</span>
+              <div class="product-art art-p3" role="img" aria-label="Discos de massa Pôr do Sol"></div>
+            </div>
+            <div class="product-content">
+              <p class="product-kicker">Discos de massa</p>
+              <h3>Discos para pastel</h3>
+              <p>Opções de 15 cm de diâmetro / 500 g e 10 cm de diâmetro / 200 g.</p>
+              <a class="product-cta wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre os discos de massa da Pôr do Sol.">Pedir informações <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-visual tone-red">
+              <span class="product-code">24 unidades</span>
+              <div class="product-art art-p4" role="img" aria-label="Micro pizzas Pôr do Sol"></div>
+            </div>
+            <div class="product-content">
+              <p class="product-kicker">Preparo rápido</p>
+              <h3>Micro pizzas</h3>
+              <p>Praticidade, preparo rápido e fácil manuseio. O catálogo informa 24 unidades por pacote.</p>
+              <a class="product-cta wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre as Micro Pizzas da Pôr do Sol.">Pedir informações <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal reveal-delay">
+            <div class="product-visual tone-yellow">
+              <span class="product-code">5 unidades</span>
+              <div class="product-art art-p5" role="img" aria-label="Mini pizzas Pôr do Sol"></div>
+            </div>
+            <div class="product-content">
+              <p class="product-kicker">Preparo rápido</p>
+              <h3>Mini pizzas</h3>
+              <p>Praticidade, preparo rápido e fácil manuseio. O catálogo informa 5 unidades por pacote.</p>
+              <a class="product-cta wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre as Mini Pizzas da Pôr do Sol.">Pedir informações <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-visual tone-green">
+              <span class="product-code">5 unidades</span>
+              <div class="product-art art-p6" role="img" aria-label="Pão árabe Pôr do Sol"></div>
+            </div>
+            <div class="product-content">
+              <p class="product-kicker">Pães árabes</p>
+              <h3>Pão árabe</h3>
+              <p>Praticidade, preparo rápido e fácil manuseio. O catálogo informa 5 unidades por pacote.</p>
+              <a class="product-cta wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre o Pão Árabe da Pôr do Sol.">Pedir informações <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="product-card product-card-wide reveal">
+            <div class="product-visual tone-cream">
+              <span class="product-code">50 unidades</span>
+              <div class="product-art art-p7" role="img" aria-label="Canudinhos para rechear Pôr do Sol"></div>
+            </div>
+            <div class="product-content">
+              <p class="product-kicker">Canudinhos para rechear</p>
+              <h3>Canudinhos</h3>
+              <p>Praticidade, preparo rápido e fácil manuseio. O catálogo informa 50 unidades por pacote.</p>
+              <a class="product-cta wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de informações comerciais sobre os Canudinhos para Rechear da Pôr do Sol.">Pedir informações <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section company" id="empresa" aria-labelledby="company-title">
+      <div class="container company-grid">
+        <div class="company-visual reveal">
+          <div class="company-sun" aria-hidden="true"></div>
+          <img src="assets/linha-produtos.webp" alt="Linha de produtos Pôr do Sol Alimentos" loading="lazy">
+          <div class="company-year"><small>Fundada em</small><strong>1995</strong></div>
+        </div>
+        <div class="company-copy reveal reveal-delay">
+          <p class="eyebrow eyebrow-green">Conheça a Pôr do Sol</p>
+          <h2 id="company-title">Uma trajetória construída no Vale do Jaguaribe.</h2>
+          <p class="company-lead">A Pôr do Sol Alimentos é apresentada no catálogo como fabricante de massas em Limoeiro do Norte - CE, com mais de 30 anos de história e atuação regional.</p>
+          <div class="company-points">
+            <article><span class="check">✓</span><div><strong>Campo fabril de 250 m²</strong><p>Dimensão informada no material institucional.</p></div></article>
+            <article><span class="check">✓</span><div><strong>Linha diversificada</strong><p>Massas, discos, pizzas, pão árabe e canudinhos para diferentes necessidades.</p></div></article>
+            <article><span class="check">✓</span><div><strong>Atuação regional</strong><p>Presença apresentada pela empresa em distribuidores e redes de supermercado.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="history-band" aria-label="Destaques institucionais">
+      <div class="container history-grid">
+        <article><span>01</span><small>Fundação</small><strong>1995</strong><p>Marco histórico destacado pela marca.</p></article>
+        <article><span>02</span><small>História</small><strong>30+</strong><p>Mais de 30 anos de atuação.</p></article>
+        <article><span>03</span><small>Estrutura</small><strong>250 m²</strong><p>Campo fabril informado no catálogo.</p></article>
+        <article><span>04</span><small>Origem</small><strong>CE</strong><p>Limoeiro do Norte, Vale do Jaguaribe.</p></article>
+      </div>
+    </section>
+
+    <section class="section quality" id="qualidade" aria-labelledby="quality-title">
+      <div class="container quality-grid">
+        <div class="quality-copy reveal">
+          <p class="eyebrow eyebrow-light">Compromisso com o consumidor</p>
+          <h2 id="quality-title">Praticidade para o dia a dia. Tradição que atravessa décadas.</h2>
+          <p>O material institucional reforça praticidade, qualidade, bem-estar e confiança como parte do compromisso da marca.</p>
+          <a class="button button-yellow wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de conhecer melhor os produtos da Pôr do Sol Alimentos.">Conhecer a linha</a>
+        </div>
+        <div class="quality-list reveal reveal-delay">
+          <article><span>01</span><div><strong>Praticidade</strong><p>Produtos pensados para preparo simples e fácil manuseio.</p></div></article>
+          <article><span>02</span><div><strong>Variedade</strong><p>Uma linha que reúne diferentes formatos e ocasiões de consumo.</p></div></article>
+          <article><span>03</span><div><strong>Tradição regional</strong><p>Uma marca com trajetória iniciada em 1995 no Ceará.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="commercial" id="comercial" aria-labelledby="commercial-title">
+      <div class="container commercial-card reveal">
+        <div class="commercial-copy">
+          <p class="eyebrow eyebrow-red">Atendimento comercial</p>
+          <h2 id="commercial-title">Quer levar a Pôr do Sol para o seu negócio?</h2>
+          <p>Fale diretamente com o atendimento comercial para consultar disponibilidade e condições de atendimento.</p>
+        </div>
+        <a class="button button-red button-large wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Tenho interesse comercial nos produtos da Pôr do Sol Alimentos.">
+          Chamar no WhatsApp
+          <span>↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-intro reveal">
+          <p class="eyebrow eyebrow-green">Contato oficial</p>
+          <h2 id="contact-title">Fale com a Pôr do Sol Alimentos.</h2>
+          <p>Atendimento comercial e informações sobre a linha de produtos.</p>
+          <img src="assets/logo-oficial.webp" width="720" height="396" alt="Pôr do Sol Alimentos" loading="lazy">
+        </div>
+        <address class="contact-card reveal reveal-delay">
+          <div class="contact-row">
+            <span class="contact-icon">⌖</span>
+            <div><small>Endereço</small><strong>Rua Augusto Fidélis, 2443</strong><p>Limoeiro do Norte - CE</p></div>
+          </div>
+          <div class="contact-row contact-row-highlight">
+            <span class="contact-icon">●</span>
+            <div><small>WhatsApp comercial</small><a class="wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Vim pelo site da Pôr do Sol Alimentos e gostaria de atendimento.">(88) 9 9900-5560</a></div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon">☎</span>
+            <div><small>Outros telefones</small><a href="tel:+5588992712966">(88) 9 9271-2966</a><a href="tel:+558834234432">(88) 3423-4432</a></div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon">@</span>
+            <div><small>E-mail</small><a href="mailto:pordosolalimentos@hotmail.com">pordosolalimentos@hotmail.com</a></div>
+          </div>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo-oficial.webp" width="720" height="396" alt="Pôr do Sol Alimentos">
+        <p>Fabricante de massas em Limoeiro do Norte - CE. Tradição desde 1995.</p>
+      </div>
+      <div><strong>Navegação</strong><a href="#produtos">Produtos</a><a href="#empresa">Empresa</a><a href="#qualidade">Qualidade</a></div>
+      <div><strong>Comercial</strong><a href="#comercial">Atendimento</a><a href="#contato">Contato</a><a class="wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Vim pelo site da Pôr do Sol Alimentos.">WhatsApp</a></div>
+      <div><strong>Endereço</strong><p>Rua Augusto Fidélis, 2443<br>Limoeiro do Norte - CE</p></div>
     </div>
-  </section>
+    <div class="container footer-bottom"><span>© <span id="current-year"></span> Pôr do Sol Alimentos.</span><a href="#topo">Voltar ao topo ↑</a></div>
+  </footer>
 
-  <section class="section company" id="empresa"><div class="container company-grid"><div class="company-art reveal"><img src="assets/linha-produtos.webp" alt="Linha de produtos Pôr do Sol Alimentos" width="480" height="149"><strong>1995</strong></div><div class="company-copy reveal delay"><p class="eyebrow green">Conheça a Pôr do Sol</p><h2>Uma empresa do Vale do Jaguaribe com mais de 30 anos de história.</h2><p>A Pôr do Sol Alimentos é uma fabricante de massas em Limoeiro do Norte - CE. O catálogo informa atuação regional e presença em distribuidores e redes de supermercado.</p><div class="points"><p><b>✓</b><span><strong>Campo fabril de 250 m²</strong><br>Dimensão informada no material institucional.</span></p><p><b>✓</b><span><strong>Linha abrangente</strong><br>Produtos para diferentes necessidades de consumo e negócio.</span></p><p><b>✓</b><span><strong>Foco no consumidor</strong><br>Praticidade, qualidade e confiabilidade aparecem como compromissos da marca.</span></p></div></div></div></section>
-
-  <section class="facts"><div class="container facts-grid"><article><small>Fundação</small><strong>1995</strong><p>Marco apresentado no catálogo e no selo da marca.</p></article><article><small>História</small><strong>30+</strong><p>Mais de 30 anos de atuação, segundo o material institucional.</p></article><article><small>Estrutura</small><strong>250 m²</strong><p>Campo fabril informado no catálogo.</p></article><article><small>Atuação</small><strong>Regional</strong><p>Presença regional apresentada pela empresa.</p></article></div></section>
-
-  <section class="section quality" id="qualidade"><div class="container quality-grid"><div class="reveal"><p class="eyebrow light">Compromisso com o consumidor</p><h2>Praticidade, variedade e confiança.</h2><p>O material institucional destaca o foco em contribuir para a praticidade, qualidade e bem-estar no dia a dia dos consumidores.</p></div><div class="quality-cards reveal delay"><article><b>01</b><div><strong>Praticidade</strong><p>Produtos com preparo simples e fácil manuseio.</p></div></article><article><b>02</b><div><strong>Variedade</strong><p>Massas para pastel, pizzas, pão árabe, canudinhos e produtos relacionados.</p></div></article><article><b>03</b><div><strong>Tradição regional</strong><p>Uma trajetória construída desde 1995.</p></div></article></div></div></section>
-
-  <section class="commercial" id="comercial"><div class="container commercial-inner reveal"><div><p class="eyebrow light">Atendimento comercial</p><h2>Leve a Pôr do Sol para o seu negócio.</h2><p>Fale com o comercial para consultar disponibilidade e atendimento para seu estabelecimento.</p></div><a class="btn btn-sun wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Tenho interesse comercial nos produtos da Pôr do Sol Alimentos.">Chamar no WhatsApp</a></div></section>
-
-  <section class="section contact" id="contato"><div class="container contact-grid"><div class="contact-copy reveal"><p class="eyebrow green">Contato oficial</p><h2>Fale com a Pôr do Sol Alimentos.</h2><img src="assets/logo-oficial.webp" alt="Pôr do Sol Alimentos" width="260" height="138"></div><address class="contact-card reveal delay"><div><small>Endereço</small><strong>Rua Augusto Fidélis, 2443</strong><span>Limoeiro do Norte - CE</span></div><div class="highlight"><small>WhatsApp comercial</small><a class="wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Vim pelo site da Pôr do Sol Alimentos e gostaria de atendimento.">(88) 9 9900-5560</a></div><div><small>Outros telefones</small><a href="tel:+5588992712966">(88) 9 9271-2966</a><a href="tel:+558834234432">(88) 3423-4432</a></div><div><small>E-mail</small><a href="mailto:pordosolalimentos@hotmail.com">pordosolalimentos@hotmail.com</a></div></address></div></section>
-</main>
-<footer class="site-footer"><div class="container footer-grid"><div><img src="assets/logo-oficial.webp" alt="Pôr do Sol Alimentos" width="260" height="138"><p>Fabricante de massas em Limoeiro do Norte - CE. Desde 1995.</p></div><div><h2>Navegação</h2><a href="#produtos">Produtos</a><a href="#empresa">Empresa</a><a href="#qualidade">Qualidade</a><a href="#contato">Contato</a></div><div><h2>Comercial</h2><a class="wa-link" href="https://wa.me/5588999005560" target="_blank" rel="noopener noreferrer" data-message="Olá! Vim pelo site da Pôr do Sol Alimentos e gostaria de falar com o comercial.">(88) 9 9900-5560</a><a href="mailto:pordosolalimentos@hotmail.com">pordosolalimentos@hotmail.com</a></div><div><h2>Endereço</h2><p>Rua Augusto Fidélis, 2443<br>Limoeiro do Norte - CE</p></div></div><div class="container footer-bottom"><p>© <span id="current-year"></span> Pôr do Sol Alimentos.</p><a href="#topo">Voltar ao topo ↑</a></div></footer>
-<script src="app.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
