@@ -1,26 +1,25 @@
 # Pôr do Sol Alimentos
 
-Site institucional da Pôr do Sol Alimentos, desenvolvido em HTML5, CSS3 e JavaScript puro.
+Website institucional estático da Pôr do Sol Alimentos, desenvolvido em HTML5, CSS3 e JavaScript puro.
 
-## Fonte institucional
+## Fonte de verdade
 
-Conteúdo, contatos, identidade visual, logotipo e imagens de produto desta versão foram preparados a partir do catálogo oficial fornecido pela empresa. O site evita números comerciais, certificações, CNPJ, CEP, horário de atendimento ou fotografias genéricas não comprovadas pelo material.
+O conteúdo institucional e os produtos são baseados no catálogo oficial fornecido para o projeto. O site utiliza apenas informações sustentadas por esse material: marca em Limoeiro do Norte - CE, fundação em 1995, mais de 30 anos de história, campo fabril informado de 250 m², contatos oficiais e a linha de produtos apresentada no catálogo.
 
-## Dados usados
+As imagens de logo, linha e produtos usadas no site foram extraídas do catálogo oficial e otimizadas localmente para WebP. Não são utilizadas fotografias genéricas de terceiros como representação da empresa ou dos produtos.
 
-- Desde 1995 / mais de 30 anos de história
-- Limoeiro do Norte - CE
-- Rua Augusto Fidélis, 2443
-- WhatsApp: (88) 9 9900-5560
-- E-mail: pordosolalimentos@hotmail.com
-- Campo fabril informado no catálogo: 250 m²
+## Estrutura
 
-## Deploy
+- `index.html` — estrutura e conteúdo semântico
+- `styles.css` — identidade visual, layout e responsividade
+- `app.js` — menu mobile, links do WhatsApp e animações leves
+- `assets/` — logo, linha e imagens reais dos produtos extraídas do catálogo
+- `build.mjs` — build estático para Cloudflare Pages
 
-Cloudflare Pages:
+## Build
 
-- Build command: `npm run build`
-- Output: `dist`
-- Root: `/`
+```bash
+npm run build
+```
 
-O build não possui dependências npm externas.
+O comando gera `dist/`, diretório esperado pelo Cloudflare Pages.
