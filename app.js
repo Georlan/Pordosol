@@ -1,3 +1,11 @@
+const productArtStyles = document.createElement('style');
+productArtStyles.textContent = `
+.product-art{position:relative;z-index:2;width:82%;height:80%;background-image:url("assets/products-clean.webp");background-repeat:no-repeat;background-size:400% 200%;filter:drop-shadow(0 18px 18px rgba(24,48,28,.16));transition:transform .35s ease}
+.product-card:hover .product-art{transform:scale(1.035) translateY(-3px)}
+.art-p1{background-position:0 0}.art-p2{background-position:33.333% 0}.art-p3{background-position:66.666% 0}.art-p4{background-position:100% 0}.art-p5{background-position:0 100%}.art-p6{background-position:33.333% 100%}.art-p7{background-position:66.666% 100%}
+`;
+document.head.appendChild(productArtStyles);
+
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
 const header = document.querySelector('.site-header');
