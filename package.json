@@ -1,0 +1,13 @@
+{
+  "name": "pordosol-website",
+  "version": "3.0.0",
+  "description": "Website oficial da Pôr do Sol Alimentos - Fabricante de Massas",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "keywords": ["pordosol", "massas", "pastel", "pizza", "ceara"],
+  "author": "Pôr do Sol Alimentos",
+  "license": "ISC"
+}
