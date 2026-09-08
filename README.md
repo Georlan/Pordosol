@@ -1,25 +1,43 @@
-# Pôr do Sol Alimentos
+# Pôr do Sol Alimentos — site e catálogo
 
-Website institucional estático da Pôr do Sol Alimentos, desenvolvido em HTML5, CSS3 e JavaScript puro.
+Site estático, sem assinatura de software obrigatória, sem banco de dados e sem processamento de pagamentos. Catálogo com 8 produtos, 5 categorias, páginas editoriais e cotação pelo WhatsApp. Todo o atendimento acontece diretamente nos canais da fábrica.
 
-## Fonte de verdade
+## Editar e publicar
 
-O conteúdo institucional e os produtos são baseados no catálogo oficial fornecido para o projeto. O site utiliza apenas informações sustentadas por esse material: marca em Limoeiro do Norte - CE, fundação em 1995, mais de 30 anos de história, campo fabril informado de 250 m², contatos oficiais e a linha de produtos apresentada no catálogo.
+Requer Node.js 20 ou mais recente. Não há dependências para instalar.
 
-As imagens de logo, linha e produtos usadas no site foram extraídas do catálogo oficial e otimizadas localmente para WebP. Não são utilizadas fotografias genéricas de terceiros como representação da empresa ou dos produtos.
+- `npm run build`: gera as páginas e os arquivos prontos em `dist/`.
+- `npm run check`: verifica integridade de páginas, imagens e lógica da mensagem de cotação.
+- Publique **o conteúdo** de `dist/` na raiz do domínio, em hospedagem para arquivos estáticos. As pastas devem abrir seus `index.html`; configure `404.html` como erro 404. Não configure reescrita de todas as páginas para a home.
+- Para prévia local: após gerar, sirva `dist/` com um servidor HTTP. Não abrir os arquivos com duplo clique, pois os módulos JavaScript e caminhos absolutos precisam de HTTP.
 
-## Estrutura
+## Onde manter as informações
 
-- `index.html` — estrutura e conteúdo semântico
-- `styles.css` — identidade visual, layout e responsividade
-- `app.js` — menu mobile, links do WhatsApp e animações leves
-- `assets/` — logo, linha e imagens reais dos produtos extraídas do catálogo
-- `build.mjs` — build estático para Cloudflare Pages
+- `content.js`: contatos, produtos, formatos, alegações do catálogo e três artigos.
+- `scripts/render.mjs`: conteúdo e estrutura das páginas.
+- `styles.css`: identidade visual, responsividade e movimentos.
+- `app.js` e `quote.js`: cotação, navegação e descoberta por preparo.
+- `assets/official/`: fotografias, embalagens e logo recuperados do catálogo, mapa e fontes locais.
+- `Catálogo.Pôr.do.Sol.pdf`: catálogo oficial que acompanha o site.
 
-## Build
+Após qualquer alteração, gere e verifique novamente antes de substituir os arquivos publicados.
 
-```bash
-npm run build
-```
+## Funcionamento comercial
 
-O comando gera `dist/`, diretório esperado pelo Cloudflare Pages.
+Cada quantidade corresponde a **pacotes**, não fardos. Sem preços ou fatores de caixa inventados. Cliente escolhe produtos, informa nome/cidade e opcionalmente estabelecimento, revisa mensagem e abre o WhatsApp. O envio final é feito pela pessoa no WhatsApp. Não existe registro automático de pedidos, estoque, pagamento ou integração com sistema comercial.
+
+A seleção de produtos fica no navegador. Nome e cidade não são persistidos pelo site. Fontes são servidas localmente; não há analytics, pixel ou rastreamento publicitário adicionado.
+
+## Fontes dos materiais
+
+Fotografias e embalagens: catálogo fornecido pelo cliente. Elementos foram extraídos com suas máscaras originais e convertidos para WebP, sem inventar produtos ou rótulos. As informações de ausência de ingredientes reproduzem o catálogo; o rótulo atualizado prevalece.
+Mapa: malhas simplificadas oficiais do IBGE, API v3. Brasil com UFs; destaque no Ceará (23) e marcador aproximado calculado sobre a área do município de Limoeiro do Norte (2307601). https://servicodados.ibge.gov.br/api/docs/malhas?versao=3
+Tipografia: Open Sans, SIL Open Font License 1.1, distribuída localmente; licença em assets/official/OFL.txt.
+
+## Entrega e manutenção
+
+Venda do desenvolvimento em pagamento único é compatível com este projeto. Domínio, eventual hospedagem e alterações futuras devem ter responsabilidade e custos definidos separadamente com o cliente. Não prometa que serviços de terceiros serão gratuitos para sempre.
+
+ASSET NECESSÁRIO para evolução fotográfica: ensaio em alta resolução de pastel preparado com a massa da marca, embalagens atuais e retratos autorizados da fábrica/equipe. O site usa o material real disponível; não inclui imagens falsas para simular esse ensaio.
+
+Antes de colocar no domínio oficial, confirmar com a fábrica: telefone de vendas, endereço, atualização das embalagens e disponibilidade das apresentações do catálogo. A revisão feita aqui validou os dados contra o material fornecido, não por contato externo com a empresa.

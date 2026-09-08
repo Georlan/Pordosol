@@ -1,78 +1,17 @@
-import fs from 'fs';
-import path from 'path';
-
-const rootDir = process.cwd();
-
-console.log('--- Executando Auditoria de Conteúdo Real e Integridade ---');
-
-const html = fs.readFileSync(path.join(rootDir, 'index.html'), 'utf8');
-const js = fs.readFileSync(path.join(rootDir, 'app.js'), 'utf8');
-const css = fs.readFileSync(path.join(rootDir, 'styles.css'), 'utf8');
-
-// 1. Proibição estrita de dados inventados / errados
-const forbidden = [
-  'Tianguá',
-  'tiangua',
-  'Planalto da Ibiapaba',
-  'ibiapaba',
-  'toneladas',
-  '5.000 clientes',
-  '5000 clientes',
-  'CNPJ inventado',
-  'Lorem ipsum',
-  'TODO',
-  'undefined',
-  'null'
-];
-
-let errors = [];
-
-for (const term of forbidden) {
-  if (html.includes(term)) errors.push(`[HTML] Contém termo proibido ou mockado: "${term}"`);
-  if (js.includes(term)) errors.push(`[JS] Contém termo proibido ou mockado: "${term}"`);
-}
-
-// 2. Termos obrigatórios oficiais do catálogo
-const requiredTerms = [
-  'Pôr do Sol Alimentos',
-  'Limoeiro do Norte',
-  '5588999005560',
-  'Rua Augusto Fidélis, 2443',
-  'pordosolalimentos@hotmail.com',
-  '1995',
-  '250 m²',
-  'Massa para Pastel',
-  'Discos de Massa',
-  'Micro Pizzas',
-  'Mini Pizzas',
-  'Pães Árabes',
-  'Canudinhos'
-];
-
-for (const term of requiredTerms) {
-  if (!html.includes(term) && !js.includes(term)) {
-    errors.push(`[CONTEÚDO] Termo oficial obrigatório não encontrado: "${term}"`);
-  }
-}
-
-// 3. Verificação de imagens referenciadas
-const imgRegex = /src=["'](\.?\/?assets\/[^"']+)["']/g;
-let match;
-while ((match = imgRegex.exec(html)) !== null) {
-  const cleanPath = match[1].replace(/^\.\//, '');
-  const fullPath = path.join(rootDir, cleanPath);
-  if (!fs.existsSync(fullPath)) {
-    errors.push(`[IMAGEM 404] Arquivo não encontrado: ${cleanPath}`);
-  }
-}
-
-if (errors.length > 0) {
-  console.error('Erros encontrados na auditoria:');
-  errors.forEach(e => console.error(` ✗ ${e}`));
-  process.exit(1);
-} else {
-  console.log('✓ Todos os dados conferem 100% com o Catálogo Oficial.');
-  console.log('✓ Nenhum dado mockado ou cidade incorreta.');
-  console.log('✓ Todos os assets referenciados existem fisicamente.');
-  console.log('--- Auditoria concluída com sucesso! ---');
-}
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {routes} from './render.mjs';
+import {products} from '../content.js';
+import {normalize,message} from '../quote.js';
+assert.deepEqual(normalize(null),[]);
+assert.deepEqual(normalize([{id:'unknown',quantity:2},{id:'massa-26x32',quantity:-1}]),[]);
+assert.deepEqual(normalize([{id:'massa-26x32',quantity:Infinity}]),[]);
+assert.deepEqual(normalize([{id:'massa-26x32',quantity:100000}]),[{id:'massa-26x32',quantity:9999}]);
+assert.deepEqual(normalize([{id:'massa-26x32',quantity:3.9}]),[{id:'massa-26x32',quantity:3}]);
+const text=message([{id:'massa-26x32',quantity:3},{id:'canudinhos',quantity:8}],{name:' Maria & João ',city:'Fortaleza, CE',company:'Café + Sabor'});
+assert(text.includes('26 × 32 cm: 3 pacote(s)'));assert(text.includes('50 unidades: 8 pacote(s)'));assert(text.includes('Nome: Maria & João'));assert.equal(decodeURIComponent(encodeURIComponent(text)),text);
+let links=0;
+for(const [route] of routes){const file='dist'+route+'index.html';assert(fs.existsSync(file),file);const html=fs.readFileSync(file,'utf8');assert.equal((html.match(/<h1[ >]/g)||[]).length,1,'One h1: '+route);assert(html.includes('lang="pt-BR"'));assert(!/250m²|B2B|ecossistema/.test(html));for(const [,link] of html.matchAll(/(?:href|src)="(\/(?!\/)[^"#]*)[^"]*"/g)){const path='dist'+decodeURI(link);assert(fs.existsSync(path),`${route}: missing ${link}`);links++;}}
+for(const p of products){assert(routes.has('/produto/'+p.id+'/'));assert(fs.statSync('assets/official/'+p.image+'.webp').size>1000);}
+const css=fs.readFileSync('dist/styles.css','utf8');assert(!css.includes('https://fonts.googleapis.com'));assert(css.includes('prefers-reduced-motion'));assert(css.includes('.header-actions{'));
+console.log(`Verificado: ${routes.size} páginas, ${products.length} produtos, ${links} referências locais e regras da cotação.`);

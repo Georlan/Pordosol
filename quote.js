@@ -1,0 +1,3 @@
+import {products} from './content.js';
+export const normalize=items=>Array.isArray(items)?products.flatMap(p=>{const match=items.find(i=>i&&i.id===p.id);const n=Number(match?.quantity);return Number.isFinite(n)&&n>0?[{id:p.id,quantity:Math.min(9999,Math.max(1,Math.floor(n)))}]:[]}):[];
+export function message(items,data){return `Olá, Pôr do Sol! Gostaria de uma cotação.\n\nNome: ${data.name.trim()}\nCidade/UF: ${data.city.trim()}${data.company.trim()?'\nEstabelecimento: '+data.company.trim():''}\n\n${normalize(items).map(i=>{const p=products.find(p=>p.id===i.id);return `• ${p.label} — ${p.format}: ${i.quantity} pacote(s)`}).join('\n')}\n\nPodem informar valores, disponibilidade e condições de entrega?`;}
