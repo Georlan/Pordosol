@@ -49,3 +49,7 @@ A arte técnica com cotas foi retirada da apresentação comercial. A massa 26 �
 Discos aparecem como uma família com dois formatos selecionáveis, sem repetir a mesma foto como se fossem duas embalagens diferentes. A única fotografia disponível é identificada como 15 cm / 500 g. ASSET NECESSÁRIO: fotografia atual da apresentação 10 cm / 200 g. Não alterar digitalmente o peso impresso na embalagem. Alegações de ausência de ingredientes dos discos foram removidas porque o rótulo fotografado menciona leite e soja e exige confirmação da fábrica.
 
 `presentation.js` centraliza os cartões usados nas páginas e nas trocas de categoria. Movimento respeita a preferência por redução de animações; as interações não bloqueiam o scroll.
+
+## Cache e consistência de publicação
+
+O build identifica o conjunto de estilos, módulos, imagens e fontes pelo conteúdo e gera `/releases/<hash>/`. O HTML aponta sempre para um único conjunto; imports dos módulos permanecem relativos dentro da mesma versão. URLs antigas continuam disponíveis para compatibilidade. As páginas são revalidadas e apenas os arquivos identificados por conteúdo podem ter cache longo. Isso evita reutilizar o CSS do design anterior com o HTML novo.

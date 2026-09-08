@@ -22,3 +22,14 @@ assert(!fs.readFileSync('dist/index.html','utf8').includes('>Beirute</button>'))
 const smallDisc=fs.readFileSync('dist/produto/discos-10/index.html','utf8');assert(smallDisc.includes('Embalagem fotografada: 15 cm · 500 g.'));assert(smallDisc.includes('data-add="discos-10" data-detail'));
 assert(fs.readFileSync('dist/index.html','utf8').includes('data-feature="massa-15x30"'));
 console.log('Regressões verificadas: discos agrupados, formato correto na cotação, Pães e comparação de massas.');
+const home=fs.readFileSync('dist/index.html','utf8');
+const release=home.match(/href="(\/releases\/[a-f0-9]{16})\/styles.css"/)?.[1];
+assert(release,'HTML must reference versioned styles');
+assert(home.includes(`src="${release}/app.js"`));
+for(const file of ['styles.css','app.js','content.js','quote.js','presentation.js']){
+ const source=fs.readFileSync('dist'+release+'/'+file,'utf8');
+ assert(!/(?<![a-f0-9]{16})\/assets\/official\//.test(source.replaceAll(release+'/assets/official/','')),file);
+ for(const [,dependency] of source.matchAll(/from ['"]\.\/([^'"]+)['"]/g))assert(fs.existsSync('dist'+release+'/'+dependency),dependency);
+}
+assert(fs.readFileSync('dist/_headers','utf8').includes('max-age=0, must-revalidate'));
+console.log('Cache verificado: HTML revalidado; estilos, módulos, fontes e imagens na mesma versão.');
