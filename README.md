@@ -53,3 +53,13 @@ Discos aparecem como uma família com dois formatos selecionáveis, sem repetir 
 ## Cache e consistência de publicação
 
 O build identifica o conjunto de estilos, módulos, imagens e fontes pelo conteúdo e gera `/releases/<hash>/`. O HTML aponta sempre para um único conjunto; imports dos módulos permanecem relativos dentro da mesma versão. URLs antigas continuam disponíveis para compatibilidade. As páginas são revalidadas e apenas os arquivos identificados por conteúdo podem ter cache longo. Isso evita reutilizar o CSS do design anterior com o HTML novo.
+
+## Documentação de entrega
+
+- `AUDIT.md`: estado real, correções, verificações e pendências que dependem do cliente.
+- `DEPLOY.md`: publicação, variáveis opcionais, cache e recuperação.
+- `CONTENT_GUIDE.md`: contatos, textos, produtos, imagens e catálogo.
+- `ASSETS.md`: origem dos materiais e imagens que ainda faltam.
+- `SEO_SETUP.md`: Search Console, Perfil da Empresa, domínio e divulgação.
+
+O sitemap é gerado automaticamente com as páginas atuais. As fichas têm impressão e compartilhamento. A página `/para-seu-negocio/` adapta a descoberta e o contato ao tipo de comprador. Nenhuma dessas funções requer banco ou serviço mensal.
