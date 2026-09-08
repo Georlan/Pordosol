@@ -1,0 +1,3 @@
+// A single family entry avoids presenting the same 500 g photograph as two packs.
+export function catalogEntries(items){return items.filter(p=>p.id!=='discos-10');}
+export function productCard(p){const discs=p.category==='discos';return `<article class="product"><a href="/produto/${p.id}/"><div class="product-picture"><img src="/assets/official/${p.image}.webp" alt="${p.name}" loading="lazy"></div><span class="eyebrow">${discs?'15 cm · 500 g / 10 cm · 200 g':p.format}</span><h3>${p.label}</h3></a>${discs?'<a class="text-link" href="/produto/discos-15/">Escolher formato →</a>':`<button class="text-button" data-add="${p.id}">Adicionar à cotação <span>＋</span></button>`}</article>`;}

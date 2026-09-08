@@ -41,3 +41,11 @@ Venda do desenvolvimento em pagamento único é compatível com este projeto. Do
 ASSET NECESSÁRIO para evolução fotográfica: ensaio em alta resolução de pastel preparado com a massa da marca, embalagens atuais e retratos autorizados da fábrica/equipe. O site usa o material real disponível; não inclui imagens falsas para simular esse ensaio.
 
 Antes de colocar no domínio oficial, confirmar com a fábrica: telefone de vendas, endereço, atualização das embalagens e disponibilidade das apresentações do catálogo. A revisão feita aqui validou os dados contra o material fornecido, não por contato externo com a empresa.
+
+## Revisão de imagens e movimento
+
+A arte técnica com cotas foi retirada da apresentação comercial. A massa 26 × 32 usa a fotografia da massa contida no PDF original; a abertura usa a composição real da massa 15 × 30.
+
+Discos aparecem como uma família com dois formatos selecionáveis, sem repetir a mesma foto como se fossem duas embalagens diferentes. A única fotografia disponível é identificada como 15 cm / 500 g. ASSET NECESSÁRIO: fotografia atual da apresentação 10 cm / 200 g. Não alterar digitalmente o peso impresso na embalagem. Alegações de ausência de ingredientes dos discos foram removidas porque o rótulo fotografado menciona leite e soja e exige confirmação da fábrica.
+
+`presentation.js` centraliza os cartões usados nas páginas e nas trocas de categoria. Movimento respeita a preferência por redução de animações; as interações não bloqueiam o scroll.

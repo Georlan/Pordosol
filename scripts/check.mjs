@@ -15,3 +15,10 @@ for(const [route] of routes){const file='dist'+route+'index.html';assert(fs.exis
 for(const p of products){assert(routes.has('/produto/'+p.id+'/'));assert(fs.statSync('assets/official/'+p.image+'.webp').size>1000);}
 const css=fs.readFileSync('dist/styles.css','utf8');assert(!css.includes('https://fonts.googleapis.com'));assert(css.includes('prefers-reduced-motion'));assert(css.includes('.header-actions{'));
 console.log(`Verificado: ${routes.size} páginas, ${products.length} produtos, ${links} referências locais e regras da cotação.`);
+const {catalogEntries,productCard}=await import('../presentation.js');
+const discs=catalogEntries(products.filter(p=>p.category==='discos'));
+assert.equal(discs.length,1);assert(productCard(discs[0]).includes('Escolher formato'));
+assert(!fs.readFileSync('dist/index.html','utf8').includes('>Beirute</button>'));
+const smallDisc=fs.readFileSync('dist/produto/discos-10/index.html','utf8');assert(smallDisc.includes('Embalagem fotografada: 15 cm · 500 g.'));assert(smallDisc.includes('data-add="discos-10" data-detail'));
+assert(fs.readFileSync('dist/index.html','utf8').includes('data-feature="massa-15x30"'));
+console.log('Regressões verificadas: discos agrupados, formato correto na cotação, Pães e comparação de massas.');
